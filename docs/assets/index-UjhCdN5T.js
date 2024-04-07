@@ -1,4 +1,4 @@
-import{d,aa as m,a as s,aj as t,w as l,ab as h,ag as c,ae as p,c as o}from"./index-CDZA0Fgw.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-CNAYWj-j.js";import{_ as w}from"./index.vue_vue_type_script_setup_true_lang-DhLy-TDC.js";import"./MdCatalog-DNiITg6T.js";import"./index-CNeoAQp6.js";const i=`## 🐶 Heading
+import{d,ae as m,a as s,an as t,w as l,af as h,ak as c,ai as p,c as o}from"./index-CAQCcHG5.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-Bauao-VW.js";import{_ as w}from"./index.vue_vue_type_script_setup_true_lang-BdjF7CpD.js";import"./MdCatalog-Bw0Mbc4Z.js";import"./index-_HTWkfte.js";const i=`## 🐶 Heading
 
 \`\`\`markdown
 ## Heading
@@ -584,4 +584,4 @@ failure、danger、bug、example、quote、hint、caution、error、attention
 
 !!!
 \`\`\`
-`,v={class:"container"},f={class:"doc"},g={name:"DemoPage"},q=d({...g,setup(y){const n=m(),e="grammar-preview",a=s(t(n.state.lang==="en-US"?i:r));return l(()=>n.state.lang,()=>{a.value=t(n.state.lang==="en-US"?i:r)}),(I,b)=>(h(),c("div",v,[p("div",f,[o(w,{editorId:e,modelValue:a.value},null,8,["modelValue"]),o(u,{editorId:e})])]))}});export{q as default};
+`,v={class:"container"},f={class:"doc"},y={name:"DemoPage"},q=d({...y,setup(g){const n=m(),e="grammar-preview",a=s(t(n.state.lang==="en-US"?i:r));return l(()=>n.state.lang,()=>{a.value=t(n.state.lang==="en-US"?i:r)}),(I,b)=>(h(),c("div",v,[p("div",f,[o(w,{editorId:e,modelValue:a.value},null,8,["modelValue"]),o(u,{editorId:e})])]))}});export{q as default};

@@ -1,4 +1,4 @@
-import{d as o,aa as n,a as d,w as r,ab as m,ag as a,ae as h,c}from"./index-CDZA0Fgw.js";import{_ as l}from"./index.vue_vue_type_script_setup_true_lang-DhLy-TDC.js";import"./index-CNeoAQp6.js";const i=`## About md-editor-v3
+import{d as o,ae as n,a as d,w as r,af as m,ak as a,ai as h,c}from"./index-CAQCcHG5.js";import{_ as l}from"./index.vue_vue_type_script_setup_true_lang-BdjF7CpD.js";import"./index-_HTWkfte.js";const i=`## About md-editor-v3
 
 <br>
 
@@ -32,4 +32,4 @@ Markdown 编辑器，vue3 版本，使用 jsx 和 typescript 语法开发，支�
 
 1. 邮箱：zbfcqtl@gmail.com
 2. issue 管理：[github issues](https://github.com/imzbf/md-editor-v3/issues)
-`,p={class:"container"},g={class:"doc"},u={name:"AboutPage"},x=o({...u,setup(b){const t=n(),e=d(t.state.lang==="en-US"?i:s);return r(()=>t.state.lang,()=>{e.value=t.state.lang==="en-US"?i:s}),(v,_)=>(m(),a("div",p,[h("div",g,[c(l,{editorId:"md-about",modelValue:e.value},null,8,["modelValue"])])]))}});export{x as default};
+`,p={class:"container"},u={class:"doc"},g={name:"AboutPage"},x=o({...g,setup(b){const t=n(),e=d(t.state.lang==="en-US"?i:s);return r(()=>t.state.lang,()=>{e.value=t.state.lang==="en-US"?i:s}),(v,_)=>(m(),a("div",p,[h("div",u,[c(l,{editorId:"md-about",modelValue:e.value},null,8,["modelValue"])])]))}});export{x as default};
