@@ -1,4 +1,4 @@
-import{d as s,ae as l,a,w as d,af as m,ak as c,ai as p,c as o}from"./index-CAQCcHG5.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-BdjF7CpD.js";import{_ as g}from"./index.vue_vue_type_script_setup_true_lang-Bauao-VW.js";import"./index-_HTWkfte.js";import"./MdCatalog-Bw0Mbc4Z.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d as s,ae as l,a,w as d,af as m,ak as c,ai as p,c as o}from"./index-DiYYwa3H.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-DSskQw1H.js";import{_ as g}from"./index.vue_vue_type_script_setup_true_lang-fN7nKC8a.js";import"./index-C8eCc_LX.js";import"./MdCatalog-BADTvFMP.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -693,7 +693,7 @@ Except for the same as \`MdPreview\`:
 
 ### 📥 transformImgUrl
 
-- **type**: \`(imgUrl: string) => string\`
+- **type**: \`(imgUrl: string) => string | Promise<string>\`
 - **default**: \`t => t\`
 
   Transform image links
@@ -2811,7 +2811,7 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 
 ### 🪒 transformImgUrl
 
-- **类型**：\`(imgUrl: string) => string\`
+- **类型**：\`(imgUrl: string) => string | Promise<string>\`
 - **默认值**：\`t => t\`
 
   转换图片链接
