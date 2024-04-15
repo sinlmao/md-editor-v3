@@ -1,4 +1,4 @@
-import{d as s,aa as l,a,w as d,ab as m,ag as c,ae as p,c as o}from"./index-CDZA0Fgw.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-DhLy-TDC.js";import{_ as g}from"./index.vue_vue_type_script_setup_true_lang-CNAYWj-j.js";import"./index-CNeoAQp6.js";import"./MdCatalog-DNiITg6T.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d as s,ae as l,a,w as d,af as m,ak as c,ai as p,c as o}from"./index-CAQCcHG5.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-BdjF7CpD.js";import{_ as g}from"./index.vue_vue_type_script_setup_true_lang-Bauao-VW.js";import"./index-_HTWkfte.js";import"./MdCatalog-Bw0Mbc4Z.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -489,6 +489,7 @@ Except for the same as \`MdPreview\`:
     'pageFullscreen',
     'fullscreen',
     'preview',
+    'previewOnly',
     'htmlPreview',
     'catalog',
     'github'
@@ -687,6 +688,15 @@ Except for the same as \`MdPreview\`:
   Default width of input box
 
 ![](https://imzbf.github.io/md-editor-v3/imgs/drag-width.jpg)
+
+---
+
+### 📥 transformImgUrl
+
+- **type**: \`(imgUrl: string) => string\`
+- **default**: \`t => t\`
+
+  Transform image links
 
 ---
 
@@ -1054,6 +1064,7 @@ onMounted(() => {
 | togglePageFullscreen | √        | ×         |
 | toggleFullscreen     | √        | ×         |
 | togglePreview        | √        | ×         |
+| togglePreviewOnly    | √        | ×         |
 | toggleHtmlPreview    | √        | ×         |
 | toggleCatalog        | √        | ×         |
 | triggerSave          | √        | ×         |
@@ -1083,6 +1094,12 @@ Get the internal state of the editor, including pageFullscreen, fullscreen, prev
 
   \`\`\`js
   editorRef.value?.on('preview', (status) => console.log(status));
+  \`\`\`
+
+- previewOnly
+
+  \`\`\`js
+  editorRef.value?.on('previewOnly', (status) => console.log(status));
   \`\`\`
 
 - htmlPreview
@@ -1129,6 +1146,18 @@ Toggle status of preview.
 
 \`\`\`js
 editorRef.value?.togglePreview(true);
+\`\`\`
+
+> Switched to the opposite status, without input parameter.
+
+---
+
+### 📖 togglePreviewOnly
+
+Toggle into Preview Only Mode.
+
+\`\`\`js
+editorRef.value?.togglePreviewOnly(true);
 \`\`\`
 
 > Switched to the opposite status, without input parameter.
@@ -1258,6 +1287,16 @@ editorRef.value?.domEventHandlers({
     console.log('compositionstart');
   }
 });
+\`\`\`
+
+---
+
+### 🎛 execCommand
+
+Insert content into the editor via trigger.
+
+\`\`\`js
+editorRef.value?.execCommand('bold');
 \`\`\`
 
 ---
@@ -1393,6 +1432,7 @@ config({
           pageFullscreen: 'fullscreen in page',
           fullscreen: 'fullscreen',
           preview: 'preview',
+          previewOnly: 'previewOnly',
           htmlPreview: 'html preview',
           catalog: 'catalog',
           github: 'source code'
@@ -2560,6 +2600,7 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
     'pageFullscreen',
     'fullscreen',
     'preview',
+    'previewOnly',
     'htmlPreview',
     'catalog',
     'github'
@@ -2765,6 +2806,15 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
   输入框默认的宽度
 
 ![](https://imzbf.github.io/md-editor-v3/imgs/drag-width.jpg)
+
+---
+
+### 🪒 transformImgUrl
+
+- **类型**：\`(imgUrl: string) => string\`
+- **默认值**：\`t => t\`
+
+  转换图片链接
 
 ---
 
@@ -3135,6 +3185,7 @@ onMounted(() => {
 | togglePageFullscreen | √        | ×         |
 | toggleFullscreen     | √        | ×         |
 | togglePreview        | √        | ×         |
+| togglePreviewOnly    | √        | ×         |
 | toggleHtmlPreview    | √        | ×         |
 | toggleCatalog        | √        | ×         |
 | triggerSave          | √        | ×         |
@@ -3164,6 +3215,12 @@ onMounted(() => {
 
   \`\`\`js
   editorRef.value?.on('preview', (status) => console.log(status));
+  \`\`\`
+
+- previewOnly
+
+  \`\`\`js
+  editorRef.value?.on('previewOnly', (status) => console.log(status));
   \`\`\`
 
 - htmlPreview
@@ -3210,6 +3267,18 @@ editorRef.value?.toggleFullscreen(true);
 
 \`\`\`js
 editorRef.value?.togglePreview(true);
+\`\`\`
+
+> 不设置入参切换为相反状态
+
+---
+
+### 📖 togglePreviewOnly
+
+切换仅预览状态。
+
+\`\`\`js
+editorRef.value?.togglePreviewOnly(true);
 \`\`\`
 
 > 不设置入参切换为相反状态
@@ -3341,6 +3410,16 @@ editorRef.value?.domEventHandlers({
     console.log('compositionstart');
   }
 });
+\`\`\`
+
+---
+
+### 🎛 execCommand
+
+通过触发器向编辑器插入内容。
+
+\`\`\`js
+editorRef.value?.execCommand('bold');
 \`\`\`
 
 ---
@@ -3477,6 +3556,7 @@ config({
           pageFullscreen: '浏览器全屏',
           fullscreen: '屏幕全屏',
           preview: '预览',
+          previewOnly: '仅预览',
           htmlPreview: 'html代码预览',
           catalog: '目录',
           github: '源码地址'
