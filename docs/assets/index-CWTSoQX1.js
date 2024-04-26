@@ -1,4 +1,4 @@
-import{d as s,ae as l,a,w as d,af as m,ak as c,ai as p,c as o}from"./index-BBLWW9n4.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-BEL_8q-E.js";import{_ as g}from"./index.vue_vue_type_script_setup_true_lang-YAlSmT7M.js";import"./index-z-kGaa3-.js";import"./MdCatalog-fXjIv3U8.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d as s,ae as l,a,w as d,af as m,ak as c,ai as p,c as o}from"./index-C87eDAxg.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-Bvp5fEAP.js";import{_ as g}from"./index.vue_vue_type_script_setup_true_lang-9VEBkhKk.js";import"./index-DNvEjbjy.js";import"./MdCatalog-CMfHppXd.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -1675,6 +1675,7 @@ To help developers quickly insert content and use editor attributes, the editor 
 | --- | --- |
 | insert | Refer to the \`DropdownToolbar\` component example below |
 | theme | Refer to the extension components in the [ExportPDF](https://github.com/imzbf/md-editor-extension/blob/main/packages/v3/components/ExportPDF/ExportPDF.tsx#L94) |
+| previewtheme | Same as above |
 | language | Same as above |
 
 !!!
@@ -3809,6 +3810,7 @@ config({
 | --- | --- |
 | insert | 参考下方的\`DropdownToolbar\`组件示例 |
 | theme | 参考扩展组件中的[ExportPDF](https://github.com/imzbf/md-editor-extension/blob/main/packages/v3/components/ExportPDF/ExportPDF.tsx#L94) |
+| previewtheme | 同上 |
 | language | 同上 |
 
 !!!
@@ -4241,4 +4243,4 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 ## ✍️ 编辑此页面
 
 [doc-zh-CN](https://github.com/imzbf/md-editor-v3/blob/dev-docs/public/doc-zh-CN.md)
-`,f={class:"container"},v={class:"doc"},h={name:"DocPage"},j=s({...h,setup(b){const n=l(),e="doc-preview",t=a(n.state.lang==="en-US"?r:i);return d(()=>n.state.lang,()=>{t.value=n.state.lang==="en-US"?r:i}),(x,w)=>(m(),c("div",f,[p("div",v,[o(u,{editorId:e,modelValue:t.value},null,8,["modelValue"]),o(g,{editorId:e})])]))}});export{j as default};
+`,f={class:"container"},v={class:"doc"},h={name:"DocPage"},j=s({...h,setup(b){const n=l(),e="doc-preview",t=a(n.state.lang==="en-US"?r:i);return d(()=>n.state.lang,()=>{t.value=n.state.lang==="en-US"?r:i}),(w,x)=>(m(),c("div",f,[p("div",v,[o(u,{editorId:e,modelValue:t.value},null,8,["modelValue"]),o(g,{editorId:e})])]))}});export{j as default};
