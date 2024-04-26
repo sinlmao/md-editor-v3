@@ -1,4 +1,4 @@
-import{d,ae as m,a as s,an as t,w as l,af as h,ak as c,ai as p,c as o}from"./index-C87eDAxg.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-9VEBkhKk.js";import{_ as w}from"./index.vue_vue_type_script_setup_true_lang-Bvp5fEAP.js";import"./MdCatalog-CMfHppXd.js";import"./index-DNvEjbjy.js";const i=`## 🐶 Heading
+import{d,ae as m,a as s,an as t,w as l,af as h,ak as c,ai as p,c as o}from"./index-eYs2j0rY.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-BE4N41jg.js";import{_ as w}from"./index.vue_vue_type_script_setup_true_lang-clXX85b-.js";import"./MdCatalog-Ca4YL2zn.js";import"./index-CJhUpa_z.js";const i=`## 🐶 Heading
 
 \`\`\`markdown
 ## Heading
