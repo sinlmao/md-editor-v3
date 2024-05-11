@@ -1,4 +1,4 @@
-import{d as s,ae as l,a,w as d,af as m,ak as c,ai as p,c as o}from"./index-eYs2j0rY.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-clXX85b-.js";import{_ as g}from"./index.vue_vue_type_script_setup_true_lang-BE4N41jg.js";import"./index-CJhUpa_z.js";import"./MdCatalog-Ca4YL2zn.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-DKwkbi4C.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-BFSSRCmj.js";import{_ as g}from"./index.vue_vue_type_script_setup_true_lang-DkKLtyOd.js";import"./index-Bds80B_4.js";import"./MdCatalog-ATcOz3jr.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -527,10 +527,10 @@ Except for the same as \`MdPreview\`:
 
 ### 📅 tableShape
 
-- **type**: \`[number, number]\`
+- **type**: \`[number, number] \\| [number, number, number, number]\`
 - **default**: \`[6, 4]\`
 
-  Preset the size of the table, [columns, rows].
+  Preset the size of the table, [columns, rows, Maximum number of columns, Maximum number of rows]
 
   \`\`\`vue
   <MdEditor :tableShape="[8, 4]" />
@@ -1529,6 +1529,21 @@ config({
 
 ---
 
+#### 🍥 zIndex
+
+\`\`\`js
+import { config } from 'md-editor-v3';
+
+config({
+  editorConfig: {
+    // for modal component
+    zIndex: 2000
+  }
+});
+\`\`\`
+
+---
+
 ### 🥠 editorExtensions
 
 Config some dependency libraries, like highlight..
@@ -1587,6 +1602,52 @@ export interface EditorExtensions {
 \`\`\`
 
 </details>
+
+---
+
+### 🥠 editorExtensionsAttrs
+
+Synchronously add attributes to the CDN link tags, consistent with the type of \`editorExtensions\`, with a value type of \`HTMLElementTagNameMap['tagName']\`.
+
+\`\`\`js
+import { config } from 'md-editor-v3';
+
+config({
+  editorExtensionsAttrs: {
+    highlight: {
+      js: {
+        className: 'hglh-js'
+      },
+      css: {
+        atom: {
+          light: {
+            className: 'atom-light-css'
+          },
+          dark: {
+            className: 'atom-dark-css'
+          }
+        }
+      }
+    }
+  }
+});
+\`\`\`
+
+Example of using built-in basic configuration:
+
+\`\`\`js
+import { config, editorExtensionsAttrs } from 'md-editor-v3';
+
+config({
+  editorExtensionsAttrs
+});
+\`\`\`
+
+!!! warning Warning
+
+Do not attempt to define the src \\ onload \\ id of the script and rel \\ href \\ id of the link in editorExtensionsAttrs, as they will be overwritten by default values
+
+!!!
 
 ---
 
@@ -2639,10 +2700,10 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 
 ### 📅 tableShape
 
-- **类型**：\`[number, number]\`
+- **类型**：\`[number, number] \\| [number, number, number, number]\`
 - **默认值**：\`[6, 4]\`
 
-  标题栏添加表格时，预设待选表格大小，第一个代表最大列数，第二个代表最大行数。
+  标题栏添加表格时，预设待选表格大小，第一个代表最大列数，第二个代表最大行数，第三个代表扩展最大列数，第四个代表扩展最大行数。
 
   \`\`\`vue
   <MdEditor :tableShape="[8, 4]" />
@@ -3662,6 +3723,21 @@ config({
 
 ---
 
+#### 🍥 zIndex
+
+\`\`\`js
+import { config } from 'md-editor-v3';
+
+config({
+  editorConfig: {
+    // 内部弹窗的zIndex
+    zIndex: 2000
+  }
+});
+\`\`\`
+
+---
+
 ### 🥠 editorExtensions
 
 类型如下，用于配置编辑器内部的扩展
@@ -3720,6 +3796,52 @@ export interface EditorExtensions {
 \`\`\`
 
 </details>
+
+---
+
+### 🥠 editorExtensionsAttrs
+
+同步添加CDN链接标签的上属性，类型与\`editorExtensions\`一直，值类型是\`HTMLElementTagNameMap<script|link>\` 内部提供所有链接的\`integrity\`值，使用方式如下：
+
+\`\`\`js
+import { config } from 'md-editor-v3';
+
+config({
+  editorExtensionsAttrs: {
+    highlight: {
+      js: {
+        className: 'hglh-js'
+      },
+      css: {
+        atom: {
+          light: {
+            className: 'atom-light-css'
+          },
+          dark: {
+            className: 'atom-dark-css'
+          }
+        }
+      }
+    }
+  }
+});
+\`\`\`
+
+使用内置的基础属性配置示例：
+
+\`\`\`js
+import { config, editorExtensionsAttrs } from 'md-editor-v3';
+
+config({
+  editorExtensionsAttrs
+});
+\`\`\`
+
+!!! warning 提醒
+
+不要尝试在editorExtensionsAttrs定义script的src\\onload\\id，link的rel\\href\\id它们会被默认值覆盖
+
+!!!
 
 ---
 
@@ -4243,4 +4365,4 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 ## ✍️ 编辑此页面
 
 [doc-zh-CN](https://github.com/imzbf/md-editor-v3/blob/dev-docs/public/doc-zh-CN.md)
-`,f={class:"container"},v={class:"doc"},h={name:"DocPage"},j=s({...h,setup(b){const n=l(),e="doc-preview",t=a(n.state.lang==="en-US"?r:i);return d(()=>n.state.lang,()=>{t.value=n.state.lang==="en-US"?r:i}),(w,x)=>(m(),c("div",f,[p("div",v,[o(u,{editorId:e,modelValue:t.value},null,8,["modelValue"]),o(g,{editorId:e})])]))}});export{j as default};
+`,f={class:"container"},v={class:"doc"},h={name:"DocPage"},j=s({...h,setup(b){const n=l(),e="doc-preview",t=a(n.state.lang==="en-US"?r:i);return d(()=>n.state.lang,()=>{t.value=n.state.lang==="en-US"?r:i}),(x,w)=>(m(),c("div",f,[p("div",v,[o(u,{editorId:e,modelValue:t.value},null,8,["modelValue"]),o(g,{editorId:e})])]))}});export{j as default};
