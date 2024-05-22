@@ -1,4 +1,4 @@
-import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-_d9-ULLe.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-CzXarhaH.js";import{_ as g}from"./index.vue_vue_type_script_setup_true_lang-BWATnpES.js";import"./index-C0t6RfLr.js";import"./MdCatalog-CA2KHdxz.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-CnCBJi1z.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-DT908PXN.js";import{_ as g}from"./index.vue_vue_type_style_index_0_lang-eMFi1X1x.js";import"./index-Nq9VTQTW.js";import"./MdCatalog-BxM5QFpq.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -408,6 +408,24 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
 - **default**: \`(h: string) => Promise.resolve(h)\`
 
   Convert the generated mermaid code
+
+---
+
+### 🕹 codeFoldable
+
+- **type**: \`boolean\`
+- **default**: \`true\`
+
+  Whether to enable code folding feature
+
+---
+
+### ⏲ autoFoldThreshold
+
+- **type**: \`number\`
+- **default**: \`30\`
+
+  Threshold for triggering automatic code folding by line count
 
 ---
 
@@ -1556,9 +1574,6 @@ config({
 });
 \`\`\`
 
-<details>
-  <summary>EditorExtensions</summary>
-
 \`\`\`ts
 export interface EditorExtensions {
   highlight?: {
@@ -1600,8 +1615,6 @@ export interface EditorExtensions {
   };
 }
 \`\`\`
-
-</details>
 
 ---
 
@@ -2581,6 +2594,24 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 - **默认值**：\`(h: string) => Promise.resolve(h)\`
 
   转换生成的 mermaid 代码
+
+---
+
+### 🕹 codeFoldable
+
+- **类型**：\`boolean\`
+- **默认值**：\`true\`
+
+  是否开启折叠代码功能
+
+---
+
+### ⏲ autoFoldThreshold
+
+- **类型**：\`number\`
+- **默认值**：\`30\`
+
+  触发自动折叠代码的行数阈值
 
 ---
 
@@ -3750,9 +3781,6 @@ config({
 });
 \`\`\`
 
-<details>
-  <summary>EditorExtensions</summary>
-
 \`\`\`ts
 export interface EditorExtensions {
   highlight?: {
@@ -3794,8 +3822,6 @@ export interface EditorExtensions {
   };
 }
 \`\`\`
-
-</details>
 
 ---
 
