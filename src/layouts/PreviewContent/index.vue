@@ -8,6 +8,7 @@
       :language="store.state.lang"
       :showCodeRowNumber="props.showCodeRowNumber"
       :codeTheme="store.state.codeTheme"
+      :autoFoldThreshold="16"
       @onHtmlChanged="onHtmlChanged"
     />
   </div>
@@ -23,7 +24,7 @@ export default {
 import type { PropType } from 'vue';
 import { useStore } from 'vuex';
 import { MdPreview } from 'md-editor-v3';
-import { debounce } from '@vavt/util';
+import { debounce, getRootOffset } from '@vavt/util';
 import type { StateType } from '@/store';
 const store = useStore<StateType>();
 
@@ -42,9 +43,9 @@ const props = defineProps({
   }
 });
 
-const onHtmlChanged = debounce(() => {
-  const { hash } = location;
+const { hash } = location;
 
+const onHtmlChanged = debounce(() => {
   if (/^#/.test(hash)) {
     const headingId = decodeURIComponent(hash.replace('#', ''));
 
@@ -52,7 +53,7 @@ const onHtmlChanged = debounce(() => {
       const targetHeadDom = document.getElementById(headingId);
 
       if (targetHeadDom) {
-        const scrollLength = (targetHeadDom as HTMLHeadElement).offsetTop + 414 - 10;
+        const scrollLength = getRootOffset(targetHeadDom).offsetTop - 10;
 
         window.scrollTo({
           top: scrollLength,
