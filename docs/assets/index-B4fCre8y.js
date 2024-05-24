@@ -1,4 +1,4 @@
-import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-ciqfliZM.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-r7pDc894.js";import{_ as g}from"./index.vue_vue_type_style_index_0_lang-Ca7wWOz_.js";import"./index-BA7IMYSg.js";import"./MdCatalog-BogjOWUV.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-CBo3iYxG.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-Bt0S4zMo.js";import{_ as g}from"./index.vue_vue_type_style_index_0_lang-D4FIgh3W.js";import"./index-DqEbvIij.js";import"./MdCatalog-CbpHR4T8.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -53,16 +53,16 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
 ### 🎲 editorId
 
 - **type**: \`string\`
-- **default**: \`'md-editor-v3'\`
+- **default**: \`'md-editor-v3\\_[\\d]'\`
 
-  Editor's id, also the html id, it is used when there are two or more editor and server render.
+  Editor's id, default incrementing by number. When using server-side rendering, make sure to set this attribute to a constant value.
 
 ---
 
 ### 🔢 showCodeRowNumber
 
 - **type**: \`boolean\`
-- **default**: \`false\`
+- **default**: \`true\`
 
   Show row number for code block or not.
 
@@ -2239,16 +2239,16 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 ### 🎲 editorId
 
 - **类型**：\`string\`
-- **默认值**：\`'md-editor-v3'\`
+- **默认值**：\`'md-editor-v3\\_[\\d]'\`
 
-  编辑器唯一标识，非必须项，服务端渲染时，防止产生服务端与客户端渲染内容不一致错误提示，以及单页面多编辑器时做区别。
+  编辑器唯一标识，默认数据递增。当使用服务端渲染时，请务必设置该属性为固定值，防止产生服务端与客户端渲染内容不一致错误提示。
 
 ---
 
 ### 🔢 showCodeRowNumber
 
 - **类型**：\`boolean\`
-- **默认值**：\`false\`
+- **默认值**：\`true\`
 
   代码块是否显示行号。
 

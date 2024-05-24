@@ -1,4 +1,4 @@
-import{d,ad as m,a as s,am as t,w as h,ae as l,aj as c,ah as p,c as o}from"./index-ciqfliZM.js";import{_ as u}from"./index.vue_vue_type_style_index_0_lang-Ca7wWOz_.js";import{_ as w}from"./index.vue_vue_type_script_setup_true_lang-r7pDc894.js";import"./MdCatalog-BogjOWUV.js";import"./index-BA7IMYSg.js";const i=`## 🐶 Heading
+import{d,ad as m,a as s,am as a,w as l,ae as h,aj as c,ah as p,c as o}from"./index-CBo3iYxG.js";import{_ as u}from"./index.vue_vue_type_style_index_0_lang-D4FIgh3W.js";import{_ as w}from"./index.vue_vue_type_script_setup_true_lang-Bt0S4zMo.js";import"./MdCatalog-CbpHR4T8.js";import"./index-DqEbvIij.js";const i=`## 🐶 Heading
 
 \`\`\`markdown
 ## Heading
@@ -48,10 +48,10 @@ _It is a dream deeply rooted in the American dream._
 
 ## 🐼 Picture
 
-![Description](https://imzbf.github.io/md-editor-v3/imgs/mark_emoji.gif)
+![Description](https://imzbf.github.io/md-editor-v3/imgs/mark_emoji.gif 'title')
 
 \`\`\`markdown
-![Description](https://imzbf.github.io/md-editor-v3/imgs/mark_emoji.gif)
+![Description](https://imzbf.github.io/md-editor-v3/imgs/mark_emoji.gif 'title')
 \`\`\`
 
 ---
@@ -133,6 +133,22 @@ pnpm install md-editor-v3
 \`\`\`
 \`\`\`\`
 
+### 🤌🏻 Forcefully fold
+
+\`\`\`js ::close
+import MdEditor from 'md-editor-rt';
+import 'md-editor-rt/lib/style.css';
+\`\`\`
+
+\`\`\`\`markdown
+\`\`\`js ::close
+import MdEditor from 'md-editor-rt';
+import 'md-editor-rt/lib/style.css';
+\`\`\`
+\`\`\`\`
+
+According to the understanding of other editors, no other editors currently employ a similar syntax. Exercise caution when using this syntax if you intend to copy your content for display in other editors.
+
 ---
 
 ## 🐻‍❄️ Quote
@@ -189,14 +205,14 @@ pnpm install md-editor-v3
 
 ## 🐮 Table
 
-| nickname | from             |
-| -------- | ---------------- |
-| zhijian  | ChongQing, China |
+| THead1          |      THead2       |           THead3 | THead4  |
+| :-------------- | :---------------: | ---------------: | ------- |
+| text-align:left | text-align:center | text-align:right | default |
 
 \`\`\`markdown
-| nickname | from             |
-| -------- | ---------------- |
-| zhijian  | ChongQing, China |
+| THead1          |      THead2       |           THead3 | THead4  |
+| :-------------- | :---------------: | ---------------: | ------- |
+| text-align:left | text-align:center | text-align:right | default |
 \`\`\`
 
 ---
@@ -342,10 +358,10 @@ _It is a dream deeply rooted in the American dream._
 
 ## 🐼 图片
 
-![描述文字](https://imzbf.github.io/md-editor-v3/imgs/mark_emoji.gif)
+![描述文字](https://imzbf.github.io/md-editor-v3/imgs/mark_emoji.gif 'title')
 
 \`\`\`markdown
-![描述文字](https://imzbf.github.io/md-editor-v3/imgs/mark_emoji.gif)
+![描述文字](https://imzbf.github.io/md-editor-v3/imgs/mark_emoji.gif 'title')
 \`\`\`
 
 ---
@@ -427,6 +443,22 @@ pnpm install md-editor-v3
 \`\`\`
 \`\`\`\`
 
+### 🤌🏻 强制折叠
+
+\`\`\`js ::close
+import MdEditor from 'md-editor-rt';
+import 'md-editor-rt/lib/style.css';
+\`\`\`
+
+\`\`\`\`markdown
+\`\`\`js ::close
+import MdEditor from 'md-editor-rt';
+import 'md-editor-rt/lib/style.css';
+\`\`\`
+\`\`\`\`
+
+据其他编辑器的了解，目前没有其他编辑器使用类似的语法，如果需要拷贝你的内容到其他编辑器展示时，请谨慎使用该语法。
+
 ---
 
 ## 🐻‍❄️ 引用
@@ -483,14 +515,14 @@ pnpm install md-editor-v3
 
 ## 🐮 表格
 
-| 昵称 | 来自      |
-| ---- | --------- |
-| 之间 | 中国-重庆 |
+| 表头1  |  表头2   |  表头3 | 表头4 |
+| :----- | :------: | -----: | ----- |
+| 左对齐 | 中间对齐 | 右对齐 | 默认  |
 
 \`\`\`markdown
-| 昵称 | 来自      |
-| ---- | --------- |
-| 之间 | 中国-重庆 |
+| 表头1  |  表头2   |  表头3 | 表头4 |
+| :----- | :------: | -----: | ----- |
+| 左对齐 | 中间对齐 | 右对齐 | 默认  |
 \`\`\`
 
 ---
@@ -584,4 +616,4 @@ failure、danger、bug、example、quote、hint、caution、error、attention
 
 !!!
 \`\`\`
-`,v={class:"container"},f={class:"doc"},y={name:"DemoPage"},q=d({...y,setup(g){const n=m(),e="grammar-preview",a=s(t(n.state.lang==="en-US"?i:r));return h(()=>n.state.lang,()=>{a.value=t(n.state.lang==="en-US"?i:r)}),(I,b)=>(l(),c("div",v,[p("div",f,[o(w,{editorId:e,modelValue:a.value},null,8,["modelValue"]),o(u,{editorId:e})])]))}});export{q as default};
+`,f={class:"container"},v={class:"doc"},y={name:"DemoPage"},q=d({...y,setup(g){const n=m(),e="grammar-preview",t=s(a(n.state.lang==="en-US"?i:r));return l(()=>n.state.lang,()=>{t.value=a(n.state.lang==="en-US"?i:r)}),(I,x)=>(h(),c("div",f,[p("div",v,[o(w,{editorId:e,modelValue:t.value},null,8,["modelValue"]),o(u,{editorId:e})])]))}});export{q as default};

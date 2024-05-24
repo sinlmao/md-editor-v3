@@ -1,4 +1,4 @@
-import{d as m,ad as d,a,am as o,w as l,ae as c,aj as p,ah as u,c as r}from"./index-ciqfliZM.js";import{_ as f}from"./index.vue_vue_type_style_index_0_lang-Ca7wWOz_.js";import{_ as h}from"./index.vue_vue_type_script_setup_true_lang-r7pDc894.js";import"./MdCatalog-BogjOWUV.js";import"./index-BA7IMYSg.js";const i=`## 😁 Basic Usage
+import{d,ad as m,a,am as o,w as l,ae as c,aj as p,ah as u,c as r}from"./index-CBo3iYxG.js";import{_ as f}from"./index.vue_vue_type_style_index_0_lang-D4FIgh3W.js";import{_ as h}from"./index.vue_vue_type_script_setup_true_lang-Bt0S4zMo.js";import"./MdCatalog-CbpHR4T8.js";import"./index-DqEbvIij.js";const i=`## 😁 Basic Usage
 
 It has been developing iteratively，so update the latest version please. Publish logs: [releases](https://github.com/imzbf/md-editor-v3/releases)
 
@@ -48,6 +48,8 @@ yarn add md-editor-v3
 \`\`\`shell [install:npm]
 npm install md-editor-v3
 \`\`\`
+
+When using server-side rendering, make sure to set \`editorId\` to a constant value.
 
 #### 🥱 Setup Template
 
@@ -99,6 +101,8 @@ const text = ref('# Hello Editor');
 const scrollElement = document.documentElement;
 <\/script>
 \`\`\`
+
+When using server-side rendering, \`scrollElement\` should be of string type, eg: \`body\`, \`#id\`, \`.class\`.
 
 ## 🥂 Api Usage
 
@@ -965,6 +969,8 @@ yarn add md-editor-v3
 npm install md-editor-v3
 \`\`\`
 
+当使用服务端渲染时，请务必设置\`editorId\`为固定值。
+
 #### 🥱 Setup 模板
 
 \`\`\`vue
@@ -1018,6 +1024,8 @@ const text = ref('# Hello Editor');
 const scrollElement = document.documentElement;
 <\/script>
 \`\`\`
+
+当使用服务端渲染时，\`scrollElement\`应该是字符类型，例：\`body\`、\`#id\`、\`.class\`。
 
 ## 🥂 扩展功能
 
@@ -1840,4 +1848,4 @@ const sanitize = (html) => {
 ## 🧻 编辑此页面
 
 [demo-zh-CN](https://github.com/imzbf/md-editor-v3/blob/dev-docs/public/demo-zh-CN.md)
-`,v={class:"container"},g={class:"doc"},x={name:"DemoPage"},I=m({...x,setup(b){const n=d(),e="demo-preview",t=a(o(n.state.lang==="en-US"?i:s));return l(()=>n.state.lang,()=>{t.value=o(n.state.lang==="en-US"?i:s)}),(E,y)=>(c(),p("div",v,[u("div",g,[r(h,{editorId:e,modelValue:t.value},null,8,["modelValue"]),r(f,{editorId:e})])]))}});export{I as default};
+`,v={class:"container"},g={class:"doc"},x={name:"DemoPage"},I=d({...x,setup(b){const n=m(),e="demo-preview",t=a(o(n.state.lang==="en-US"?i:s));return l(()=>n.state.lang,()=>{t.value=o(n.state.lang==="en-US"?i:s)}),(E,y)=>(c(),p("div",v,[u("div",g,[r(h,{editorId:e,modelValue:t.value},null,8,["modelValue"]),r(f,{editorId:e})])]))}});export{I as default};
