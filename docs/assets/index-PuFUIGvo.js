@@ -1,4 +1,4 @@
-import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-BguUYWac.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-Cla-PL8_.js";import{_ as g}from"./index.vue_vue_type_style_index_0_lang-BIuzLShU.js";import"./index-BkB1s9pA.js";import"./MdCatalog-Dp3Yx7bZ.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-DO4V3R-u.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-VRbGBjcC.js";import{_ as g}from"./index.vue_vue_type_style_index_0_lang-D8d1eFpr.js";import"./index-BBq1n6JG.js";import"./MdCatalog-CWYdYsjw.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -304,6 +304,16 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
 - **default**: \`false\`
 
   Enable the function of enlarging images.
+
+  \`\`\`html
+  <MdEditor noImgZoomIn />
+  \`\`\`
+
+  After version \`4.15.4\`, it is also possible to disable zooming by setting the class \`.not-zoom\`.
+
+  \`\`\`markdown
+  <img class="not-zoom">
+  \`\`\`
 
 ---
 
@@ -2489,7 +2499,17 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 - **类型**：\`boolean\`
 - **默认值**：\`false\`
 
-  是否关闭编辑器默认的放大功能（\`^4.4.0\`）
+  是否关闭编辑器默认的放大功能
+
+  \`\`\`html
+  <MdEditor noImgZoomIn />
+  \`\`\`
+
+  在\`4.15.4\`以后，也可以设置\`.not-zoom\`来禁用它
+
+  \`\`\`markdown
+  <img class="not-zoom">
+  \`\`\`
 
 ---
 
