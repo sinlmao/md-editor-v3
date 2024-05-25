@@ -1,4 +1,4 @@
-import{d,ad as m,a,am as o,w as l,ae as c,aj as p,ah as u,c as r}from"./index-DO4V3R-u.js";import{_ as f}from"./index.vue_vue_type_style_index_0_lang-D8d1eFpr.js";import{_ as h}from"./index.vue_vue_type_script_setup_true_lang-VRbGBjcC.js";import"./MdCatalog-CWYdYsjw.js";import"./index-BBq1n6JG.js";const i=`## 😁 Basic Usage
+import{d,ad as m,a,am as o,w as l,ae as c,aj as p,ah as u,c as r}from"./index-ULIcYAqQ.js";import{_ as f}from"./index.vue_vue_type_style_index_0_lang-BPgUDPip.js";import{_ as h}from"./index.vue_vue_type_script_setup_true_lang-BTrq7eik.js";import"./MdCatalog-ByHzlX67.js";import"./index-CR1PCUOF.js";const i=`## 😁 Basic Usage
 
 It has been developing iteratively，so update the latest version please. Publish logs: [releases](https://github.com/imzbf/md-editor-v3/releases)
 
@@ -813,10 +813,11 @@ const text = ref('');
 
 ### 🔒 Compile-time Prevention of XSS
 
-The plugin \`markdown-it-xss\` has already processed dangerous code during compilation, and currently supports displaying some properties of the \`input \` and \`iframe\` tags by default:
+The built-in XSS extension has already handled dangerous code during compilation, and on top of the default whitelist, it includes additional tags and attributes:
 
-\`\`\`json
+\`\`\`json::close
 {
+  "img": ["class"],
   // Task List
   "input": ["class", "disabled", "type", "checked"],
   // Embedded video codes such as YouTube, WeTV, and Bilibili
@@ -850,6 +851,9 @@ config({
 Add a configuration that allows for events where image loading fails
 
 \`\`\`js
+import { config } from 'md-editor-v3';
+// import { getDefaultWhiteList } from 'xss';
+
 config({
   markdownItPlugins(plugins) {
     return plugins.map((p) => {
@@ -857,27 +861,33 @@ config({
         return {
           ...p,
           options: {
-            xss(xss) {
-              return {
-                whiteList: Object.assign({}, xss.getDefaultWhiteList(), {
-                  // If you need to use task list, please keep this configuration
-                  input: ['class', 'disabled', 'type', 'checked'],
-                  // If you need to use embedded video code, please keep this configuration
-                  iframe: [
-                    'class',
-                    'width',
-                    'height',
-                    'src',
-                    'title',
-                    'border',
-                    'frameborder',
-                    'framespacing',
-                    'allow',
-                    'allowfullscreen'
-                  ],
-                  img: ['onerror']
-                })
-              };
+            // Option 1: Extend All by Yourself
+            // xss() {
+            //   return {
+            //     whiteList: Object.assign({}, getDefaultWhiteList(), {
+            //       // If you need to use task list, please keep this configuration
+            //       img: ['class'],
+            //       input: ['class', 'disabled', 'type', 'checked'],
+            //       // If you need to use embedded video code, please keep this configuration
+            //       iframe: [
+            //         'class',
+            //         'width',
+            //         'height',
+            //         'src',
+            //         'title',
+            //         'border',
+            //         'frameborder',
+            //         'framespacing',
+            //         'allow',
+            //         'allowfullscreen'
+            //       ],
+            //       img: ['onerror']
+            //     })
+            //   };
+            // }
+            // Option 2: Add on Top of the Default Whitelist. ^4.15.6
+            extendedWhiteList: {
+              img: ['onerror']
             }
           }
         };
@@ -1741,10 +1751,11 @@ const text = ref('');
 
 ### 🔒 编译时防范 XSS
 
-内置的\`markdown-it-xss\`已经在编译中处理了危险代码，目前默认支持展示\`input\`和\`iframe\`标签的部分属性：
+内置的XSS扩展已经在编译中处理了危险代码，在默认白名单的基础上，增加了部分标签和属性：
 
-\`\`\`json
+\`\`\`json::close
 {
+  "img": ["class"],
   // 支持任务列表
   "input": ["class", "disabled", "type", "checked"],
   // 主要支持youtobe、腾讯视频、哔哩哔哩等内嵌视频代码
@@ -1778,6 +1789,9 @@ config({
 我们添加一个允许图片加载失败的事件
 
 \`\`\`js
+import { config } from 'md-editor-v3';
+// import { getDefaultWhiteList } from 'xss';
+
 config({
   markdownItPlugins(plugins) {
     return plugins.map((p) => {
@@ -1785,27 +1799,33 @@ config({
         return {
           ...p,
           options: {
-            xss(xss) {
-              return {
-                whiteList: Object.assign({}, xss.getDefaultWhiteList(), {
-                  // 如果你需要使用任务列表，请保留这项配置
-                  input: ['class', 'disabled', 'type', 'checked'],
-                  // 如果你需要使用嵌入视频代码，请保留这项配置
-                  iframe: [
-                    'class',
-                    'width',
-                    'height',
-                    'src',
-                    'title',
-                    'border',
-                    'frameborder',
-                    'framespacing',
-                    'allow',
-                    'allowfullscreen'
-                  ],
-                  img: ['onerror']
-                })
-              };
+            // 方式一：自行扩展全部
+            // xss() {
+            //   return {
+            //     whiteList: Object.assign({}, getDefaultWhiteList(), {
+            //       // 如果你需要使用任务列表，请保留这项配置
+            //       img: ['class'],
+            //       input: ['class', 'disabled', 'type', 'checked'],
+            //       // 如果你需要使用嵌入视频代码，请保留这项配置
+            //       iframe: [
+            //         'class',
+            //         'width',
+            //         'height',
+            //         'src',
+            //         'title',
+            //         'border',
+            //         'frameborder',
+            //         'framespacing',
+            //         'allow',
+            //         'allowfullscreen'
+            //       ],
+            //       img: ['onerror']
+            //     })
+            //   };
+            // },
+            // 方式二：在默认白名单的基础上新增。^4.15.6
+            extendedWhiteList: {
+              img: ['onerror']
             }
           }
         };
