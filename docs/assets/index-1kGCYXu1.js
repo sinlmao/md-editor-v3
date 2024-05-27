@@ -1,4 +1,4 @@
-import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-ULIcYAqQ.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-BTrq7eik.js";import{_ as g}from"./index.vue_vue_type_style_index_0_lang-BPgUDPip.js";import"./index-CR1PCUOF.js";import"./MdCatalog-ByHzlX67.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-DXkHasaO.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-COJeuzKt.js";import{_ as g}from"./index.vue_vue_type_style_index_0_lang-BdYH2d8-.js";import"./index-jdZZPG2y.js";import"./MdCatalog-958GmBP8.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -199,11 +199,15 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
 - **type**: \`(html: string) => string\`
 - **default**: \`(html) => html\`
 
-  Sanitize the html, prevent XSS. When you can be sure that your content is OK, ignore this.
+  This attribute is used to alter the compiled HTML content.
 
-  !!! warning Pay Attention
+  !!! warning
 
-  After 3.x, dangerous code has been processed by default. Please do not use this attribute unless there are special requirements
+  This is a reserved attribute.
+
+  Basic solution for dangerous code has been built-in since version 3.x. eg: \`<script>alert(123)<\/script>\`
+
+  A more comprehensive solution has been implemented since version 4.11.3. [Refer to](https://imzbf.github.io/md-editor-v3/en-US/demo#%F0%9F%94%8F%20Modify%20XSS%20configuration)
 
   !!!
 
@@ -2395,11 +2399,15 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 - **类型**：\`(html: string) => string\`
 - **默认值**：\`(html) => html\`
 
-  通过该方法移除危险内容，比如 xss 相关，当你很确定你的内容不会出现类似情况时，不必设置它。
+  通过该属性修改编译后的html内容
 
-  !!! warning 提示
+  !!! warning
 
-  3.x 以后已内置危险代码处理，非特殊需求请勿使用该属性
+  该属性为保留属性
+
+  基本的危险代码处理方案在3.x以后已内置，例如\`<script>alert(123)<\/script>\`
+
+  在4.11.3以后实现了更完善的处理方案，[参考](https://imzbf.github.io/md-editor-v3/zh-CN/demo#%F0%9F%94%8F%20%E4%BF%AE%E6%94%B9%20xss%20%E9%85%8D%E7%BD%AE)
 
   !!!
 
