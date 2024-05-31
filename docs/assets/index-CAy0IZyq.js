@@ -1,4 +1,4 @@
-import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-DXkHasaO.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-COJeuzKt.js";import{_ as g}from"./index.vue_vue_type_style_index_0_lang-BdYH2d8-.js";import"./index-jdZZPG2y.js";import"./MdCatalog-958GmBP8.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-DfvXbvEB.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-BgmE4jtY.js";import{_ as g}from"./index.vue_vue_type_style_index_0_lang-CB-yMiaf.js";import"./index-CUWU1ZCm.js";import"./MdCatalog-DBvnOdN1.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -205,7 +205,7 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
 
   This is a reserved attribute.
 
-  Basic solution for dangerous code has been built-in since version 3.x. eg: \`<script>alert(123)<\/script>\`
+  Basic solution for dangerous code has been built-in since version 3.x. eg: \`<script>alert(123)<\/script>\`. Prior to version 4.11.3, it was recommended to utilize this attribute for cleaning more complex content to prevent XSS attacks.
 
   A more comprehensive solution has been implemented since version 4.11.3. [Refer to](https://imzbf.github.io/md-editor-v3/en-US/demo#%F0%9F%94%8F%20Modify%20XSS%20configuration)
 
@@ -2405,7 +2405,7 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 
   该属性为保留属性
 
-  基本的危险代码处理方案在3.x以后已内置，例如\`<script>alert(123)<\/script>\`
+  基本的危险代码处理方案在3.x以后已内置，例如\`<script>alert(123)<\/script>\`，4.11.3之前建议使用该属性来清理更复杂的内容以防止 XSS。
 
   在4.11.3以后实现了更完善的处理方案，[参考](https://imzbf.github.io/md-editor-v3/zh-CN/demo#%F0%9F%94%8F%20%E4%BF%AE%E6%94%B9%20xss%20%E9%85%8D%E7%BD%AE)
 
