@@ -1,4 +1,4 @@
-import{d,ad as m,a,am as o,w as l,ae as c,aj as p,ah as u,c as r}from"./index-DfvXbvEB.js";import{_ as f}from"./index.vue_vue_type_style_index_0_lang-CB-yMiaf.js";import{_ as h}from"./index.vue_vue_type_script_setup_true_lang-BgmE4jtY.js";import"./MdCatalog-DBvnOdN1.js";import"./index-CUWU1ZCm.js";const i=`## 😁 Basic Usage
+import{d,ad as m,a,ap as o,w as l,ae as c,aj as p,ah as u,c as r}from"./index-hO0oPNwW.js";import{_ as f}from"./index.vue_vue_type_style_index_0_lang-DOKcOT1N.js";import{_ as h}from"./index.vue_vue_type_script_setup_true_lang-D5qMzses.js";import"./MdCatalog-BXlKYZje.js";import"./index-ql1WnFDj.js";const i=`## 😁 Basic Usage
 
 It has been developing iteratively，so update the latest version please. Publish logs: [releases](https://github.com/imzbf/md-editor-v3/releases)
 
@@ -932,7 +932,7 @@ const sanitize = (html) => {
 
 目前一直在迭代开发，所以尽量安装最新版本。发布日志请前往：[releases](https://github.com/imzbf/md-editor-v3/releases)
 
-目前 vue3 已经能很友好的使用 jsx 来开发了，对于一些爱好者（比如作者本身），需要考虑兼容一下。
+目前 vue3 已经能很友好的使用 jsx 来开发了，对于一些爱好者（比如作者），需要考虑兼容一下。
 
 ### 🤓 CDN 链接
 

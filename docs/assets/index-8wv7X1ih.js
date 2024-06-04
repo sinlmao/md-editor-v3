@@ -1,4 +1,4 @@
-import{d as s,ad as l,a,w as d,ae as m,aj as c,ah as p,c as o}from"./index-DfvXbvEB.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-BgmE4jtY.js";import{_ as g}from"./index.vue_vue_type_style_index_0_lang-CB-yMiaf.js";import"./index-CUWU1ZCm.js";import"./MdCatalog-DBvnOdN1.js";const r=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d,ad as m,a as c,am as o,w as p,ae as u,aj as g,ah as f,c as r,an as i,ao as s}from"./index-hO0oPNwW.js";import{_ as v}from"./index.vue_vue_type_script_setup_true_lang-D5qMzses.js";import{_ as h}from"./index.vue_vue_type_style_index_0_lang-DOKcOT1N.js";import"./index-ql1WnFDj.js";import"./MdCatalog-BXlKYZje.js";const l=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -234,7 +234,7 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
 - **type**: \`boolean\`
 - **default**: \`true\`
 
-  Not append iconfont script, [download](https://at.alicdn.com/t/c/font_2605852_u82y61ve02.js) and import it by yourself.
+  Not append iconfont script, download [Symbol version](\${iconfontSvgUrl}) or [Font class version](\${iconfontClassUrl}) and import it by yourself.
 
   \`\`\`vue
   <template>
@@ -246,6 +246,10 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
   import 'md-editor-v3/lib/style.css';
 
   import '/assets/iconfont.js';
+
+  // User Font class version
+  // import '/assets/iconfont.css';
+  // config({ iconfontType: 'class' })
   <\/script>
   \`\`\`
 
@@ -330,7 +334,7 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
 
   !!! warning Type Warning
 
-  The icon corresponding to copy can only be a string, while others can be components or strings
+  The icon corresponding to \`copy\` and \`collapse-tips\` can only be a string, while others can be components or strings
 
   !!!
 
@@ -341,7 +345,7 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
 
   <script 😬setup lang="ts">
   import type { CustomIcon } from 'md-editor-v3';
-  import { MdEditor } from 'md-editor-v3';
+  import { MdEditor, StrIcon } from 'md-editor-v3';
   // Assuming you have installed an icon library or customized icon components
   import { IconFont } from 'tdesign-icons-vue-next';
   import 'md-editor-v3/lib/style.css';
@@ -350,7 +354,10 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
     bold: {
       component: 'A'
     },
+    // Demonstrating the use of default icons
+    copy: StrIcon('copy', {}),
     // copy: '<i class="fa fa-car"></i>',
+    // 'collapse-tips': '<i class="fa fa-car"></i>',
     preview: {
       component: '<i class="fa fa-car"></i>'
     },
@@ -1742,6 +1749,7 @@ Shortcut keys are only available when the textarea has received focus!
 | CTRL + O | ordered list | \`1. ordered list\` |
 | CTRL + L | link | \`[link](https://github.com/imzbf/md-editor-v3)\` |
 | CTRL + Z | withdraw | Withdraw history in editor, not the function of system |
+| CTRL + F | find and replace |  |
 | CTRL + SHIFT + S | line-through | \`~line-through~\` |
 | CTRL + SHIFT + U | unordered list | \`- unordered list\` |
 | CTRL + SHIFT + C | code block |  |
@@ -2198,7 +2206,7 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 ## ✍️ Edit This Page
 
 [doc-en-US](https://github.com/imzbf/md-editor-v3/blob/dev-docs/public/doc-en-US.md)
-`,i=`> 在线尝试示例：[传送门](https://codesandbox.io/s/epic-bird-2znqo)
+`,a=`> 在线尝试示例：[传送门](https://codesandbox.io/s/epic-bird-2znqo)
 
 ## 🔖 MdPreview Props
 
@@ -2434,7 +2442,7 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 - **类型**：\`boolean\`
 - **默认值**：\`true\`
 
-  不插入 iconfont 链接，你可以[下载](https://at.alicdn.com/t/c/font_2605852_u82y61ve02.js)到本地自行引入。
+  不插入 iconfont 链接，你可以下载[Symbol版本](\${iconfontSvgUrl})或者[Font class版本](\${iconfontClassUrl})到本地自行引入。
 
   \`\`\`vue
   <template>
@@ -2442,10 +2450,14 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
   </template>
 
   <script setup>
-  import { MdEditor } from 'md-editor-v3';
+  import { MdEditor, config } from 'md-editor-v3';
   import 'md-editor-v3/lib/style.css';
 
   import '/assets/iconfont.js';
+
+  // 使用Font class版本
+  // import '/assets/iconfont.css';
+  // config({ iconfontType: 'class' })
   <\/script>
   \`\`\`
 
@@ -2530,7 +2542,7 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 
   !!! warning 类型提示
 
-  copy 对应的图标只能是字符串，其他的都可以是组件或者字符串
+  copy、collapse-tips 对应的图标只能是字符串，其他的都可以是组件或者字符串
 
   !!!
 
@@ -2541,7 +2553,7 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 
   <script 😬setup lang="ts">
   import type { CustomIcon } from 'md-editor-v3';
-  import { MdEditor } from 'md-editor-v3';
+  import { MdEditor, StrIcon } from 'md-editor-v3';
   // 假设你使用了三方图标库或者自定义了图标组件
   import { IconFont } from 'tdesign-icons-vue-next';
   import 'md-editor-v3/lib/style.css';
@@ -2550,7 +2562,10 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
     bold: {
       component: 'A'
     },
+    // 演示使用默认图标复制内容
+    copy: StrIcon('copy', {}),
     // copy: '<i class="fa fa-car"></i>',
+    // 'collapse-tips': '<i class="fa fa-car"></i>',
     preview: {
       component: '<i class="fa fa-car"></i>'
     },
@@ -3965,6 +3980,7 @@ config({
 | CTRL + O | 有序列表 | \`1. 有序列表\` |
 | CTRL + L | 链接 | \`[链接](https://github.com/imzbf)\` |
 | CTRL + Z | 撤回 | 触发编辑器内内容撤回，与系统无关 |
+| CTRL + F | 查找替换 |  |
 | CTRL + SHIFT + S | 删除线 | \`~删除线~\` |
 | CTRL + SHIFT + U | 无序列表 | \`- 无序列表\` |
 | CTRL + SHIFT + C | 块级代码 | 多行代码块 |
@@ -4419,4 +4435,4 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 ## ✍️ 编辑此页面
 
 [doc-zh-CN](https://github.com/imzbf/md-editor-v3/blob/dev-docs/public/doc-zh-CN.md)
-`,f={class:"container"},v={class:"doc"},h={name:"DocPage"},j=s({...h,setup(b){const n=l(),e="doc-preview",t=a(n.state.lang==="en-US"?r:i);return d(()=>n.state.lang,()=>{t.value=n.state.lang==="en-US"?r:i}),(x,w)=>(m(),c("div",f,[p("div",v,[o(u,{editorId:e,modelValue:t.value},null,8,["modelValue"]),o(g,{editorId:e})])]))}});export{j as default};
+`,b={class:"container"},y={class:"doc"},x={name:"DocPage"},P=d({...x,setup(w){const n=m(),e="doc-preview",t=c(o(n.state.lang==="en-US"?l:a,{iconfontSvgUrl:i,iconfontClassUrl:s}));return p(()=>n.state.lang,()=>{t.value=o(n.state.lang==="en-US"?l:a,{iconfontSvgUrl:i,iconfontClassUrl:s})}),(E,C)=>(u(),g("div",b,[f("div",y,[r(v,{editorId:e,modelValue:t.value},null,8,["modelValue"]),r(h,{editorId:e})])]))}});export{P as default};
