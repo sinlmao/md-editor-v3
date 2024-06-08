@@ -1,4 +1,4 @@
-import{d,ad as m,a as c,am as o,w as p,ae as u,aj as g,ah as f,c as r,an as i,ao as s}from"./index-CVb15S85.js";import{_ as v}from"./index.vue_vue_type_script_setup_true_lang-PmTdBSR0.js";import{_ as h}from"./index.vue_vue_type_style_index_0_lang-BuFAMZXb.js";import"./index-DR3C6Ibx.js";import"./MdCatalog-BPNfEo6n.js";const l=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d,ad as m,a as c,am as o,w as p,ae as u,aj as g,ah as f,c as r,an as i,ao as s}from"./index-Dp5ZdC2m.js";import{_ as v}from"./index.vue_vue_type_script_setup_true_lang-8E6hofV6.js";import{_ as h}from"./index.vue_vue_type_style_index_0_lang-BxUEmsu6.js";import"./index-C93pSSwn.js";import"./MdCatalog-Ci59dDYJ.js";const l=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
