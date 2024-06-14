@@ -9,8 +9,9 @@
         :theme="store.state.theme"
         :previewTheme="store.state.previewTheme"
         :codeTheme="store.state.codeTheme"
-        :toolbars="toolbars"
+        :toolbars="state.toolbars"
         :footers="['markdownTotal', '=', 0, 'scrollSwitch']"
+        :inputBoxWitdh="state.inputBoxWitdh"
         showCodeRowNumber
         autoDetectCode
         @onUploadImg="uploadImg"
@@ -43,6 +44,7 @@ import { computed, reactive, watch, ref, onMounted } from 'vue';
 import { useStore } from 'vuex';
 import { MdEditor } from 'md-editor-v3';
 import { Emoji, Mark, ExportPDF } from '@vavt/v3-extension';
+import { isMobile } from '@vavt/util';
 import type { ExposeParam } from 'md-editor-v3';
 import '@vavt/v3-extension/lib/asset/style.css';
 import mdEN from '../../../public/preview-en-US.md';
@@ -64,7 +66,9 @@ const editorRef = ref<ExposeParam>();
 const state = reactive({
   text: store.state.lang === 'zh-CN' ? mdCN : mdEN,
   modalVisible: false,
-  modalFullscreen: false
+  modalFullscreen: false,
+  toolbars,
+  inputBoxWitdh: '50%'
 });
 
 const tips = computed(() => {
@@ -109,8 +113,35 @@ const uploadImg = async (files: Array<File>, callback: (urls: string[]) => void)
   callback(res.map((item: any) => item.data.url));
 };
 
+const changeLayout = () => {
+  if (isMobile()) {
+    // 在移动端不现实分屏预览，要么编辑，要么仅预览
+    state.toolbars = [
+      'previewOnly',
+      ...toolbars.filter((item) => !(['preview', 'previewOnly'] as any).includes(item))
+    ];
+    state.inputBoxWitdh = '100%';
+    editorRef.value?.togglePreview(false);
+  } else {
+    state.toolbars = toolbars;
+    state.inputBoxWitdh = '50%';
+    editorRef.value?.togglePreview(true);
+  }
+};
+
 onMounted(() => {
   console.log(editorRef.value?.on('catalog', console.log));
+
+  editorRef.value?.on('previewOnly', (v) => {
+    if (isMobile()) {
+      if (!v) {
+        editorRef.value?.togglePreview(false);
+      }
+    }
+  });
+
+  changeLayout();
+  window.addEventListener('resize', changeLayout);
 });
 </script>
 
