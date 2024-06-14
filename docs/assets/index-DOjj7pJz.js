@@ -1,4 +1,4 @@
-import{d,ad as m,a,ap as o,w as l,ae as c,aj as p,ah as u,c as r}from"./index-Dp5ZdC2m.js";import{_ as f}from"./index.vue_vue_type_style_index_0_lang-BxUEmsu6.js";import{_ as h}from"./index.vue_vue_type_script_setup_true_lang-8E6hofV6.js";import"./MdCatalog-Ci59dDYJ.js";import"./index-C93pSSwn.js";const i=`## 😁 Basic Usage
+import{d as l,ad as c,a as p,an as r,w as u,ae as f,aj as h,ah as g,c as o,ao as i,ap as s,aq as m}from"./index-CuN_Hyx1.js";import{_ as v}from"./index.vue_vue_type_style_index_0_lang-dh4RwG_z.js";import{_ as x}from"./index.vue_vue_type_script_setup_true_lang-Z6pG7kMg.js";import"./MdCatalog-CV2OExW5.js";import"./index-kegk0pe3.js";const d=`## 😁 Basic Usage
 
 It has been developing iteratively，so update the latest version please. Publish logs: [releases](https://github.com/imzbf/md-editor-v3/releases)
 
@@ -748,14 +748,24 @@ Change background color in dark mode:
 
 ### 🙍🏻‍♂️ Import All Library
 
-\`\`\`vue
-<template>
-  <MdEditor v-model="text" noIconfont />
-</template>
+1. Install Dependencies
 
-<script setup>
-import { ref } from 'vue';
-import { MdEditor, config } from 'md-editor-v3';
+\`\`\`shell
+yarn add screenfull katex cropperjs mermaid highlight.js prettier
+\`\`\`
+
+2. Configure
+
+!!! warning
+
+We recommend configuring it at the project entry point, such as in \`main.js\` for projects created with Vite. Avoid calling \`config\` within components!
+
+!!!
+
+main.js
+
+\`\`\`js
+import { config } from 'md-editor-v3';
 import 'md-editor-v3/lib/style.css';
 
 import screenfull from 'screenfull';
@@ -778,7 +788,7 @@ import parserMarkdown from 'prettier/parser-markdown';
 import * as prettier from 'prettier';
 import parserMarkdown from 'prettier/plugins/markdown';
 
-// https://at.alicdn.com/t/c/font_2605852_u82y61ve02.js
+// \${iconfontSvgUrl}
 import './assets/iconfont.js';
 
 config({
@@ -804,6 +814,17 @@ config({
     }
   }
 });
+\`\`\`
+
+\`\`\`vue
+<template>
+  <MdEditor v-model="text" noIconfont />
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import { MdEditor } from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
 
 const text = ref('');
 <\/script>
@@ -925,10 +946,72 @@ const sanitize = (html) => {
 <\/script>
 \`\`\`
 
+### 🗂 Folding Document Content
+
+\`\`\`js
+import { config } from 'md-editor-v3';
+import { foldGutter } from '@codemirror/language';
+import { lineNumbers } from '@codemirror/view';
+
+config({
+  codeMirrorExtensions(_theme, extensions) {
+    return [...extensions, lineNumbers(), foldGutter()];
+  }
+});
+\`\`\`
+
+### 🏄🏻‍♂️ Open Links In New Window
+
+1. Install additional extensions
+
+\`\`\`shell
+yarn add markdown-it-link-attributes
+\`\`\`
+
+2. Add extensions to the compiler
+
+\`\`\`js
+import { config } from 'md-editor-v3';
+import LinkAttr from 'markdown-it-link-attributes';
+// import Anchor from 'markdown-it-anchor';
+
+config({
+  markdownItPlugins(plugins) {
+    return [
+      ...plugins,
+      {
+        type: 'linkAttr',
+        plugin: LinkAttr,
+        options: {
+          matcher(href: string) {
+            // If markdown-it-anchor is used.
+            // Anchor links at the heading should be ignored.
+            return !href.startsWith('#');
+          },
+          attrs: {
+            target: '_blank'
+          }
+        }
+      },
+      // {
+      //   type: 'anchor',
+      //   plugin: Anchor,
+      //   options: {
+      //     permalink: Anchor.permalink.headerLink(),
+      //     slugify(s: string) {
+      //       return s;
+      //     }
+      //   }
+      // }
+    ];
+  }
+});
+\`\`\`
+
 ## 🧻 Edit This Page
 
 [demo-en-US](https://github.com/imzbf/md-editor-v3/blob/dev-docs/public/demo-en-US.md)
-`,s=`## 😁 基本使用示例
+`,a=`## 😁 基本使用示例
 
 目前一直在迭代开发，所以尽量安装最新版本。发布日志请前往：[releases](https://github.com/imzbf/md-editor-v3/releases)
 
@@ -1686,14 +1769,24 @@ const toolbars = ['italic', 'underline', '-', 'bold', '=', 'github'];
 
 这里给出一个完全不使用外部链接，全部自行引入的示例：
 
-\`\`\`vue
-<template>
-  <MdEditor v-model="text" noIconfont />
-</template>
+1. 安装依赖
 
-<script setup>
-import { ref } from 'vue';
-import { MdEditor, config } from 'md-editor-v3';
+\`\`\`shell
+yarn add screenfull katex cropperjs mermaid highlight.js prettier
+\`\`\`
+
+2. 配置到编辑器
+
+!!! warning
+
+我们建议你在项目入口配置，例如 vite 创建的项目中的 main.js。不要在组件中去调用 \`config\` ！
+
+!!!
+
+main.js
+
+\`\`\`js
+import { config } from 'md-editor-v3';
 import 'md-editor-v3/lib/style.css';
 
 import screenfull from 'screenfull';
@@ -1716,7 +1809,7 @@ import parserMarkdown from 'prettier/parser-markdown';
 import * as prettier from 'prettier';
 import parserMarkdown from 'prettier/plugins/markdown';
 
-// https://at.alicdn.com/t/c/font_2605852_u82y61ve02.js
+// \${iconfontSvgUrl}
 import './assets/iconfont.js';
 
 config({
@@ -1742,6 +1835,17 @@ config({
     }
   }
 });
+\`\`\`
+
+\`\`\`vue
+<template>
+  <MdEditor v-model="text" noIconfont />
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import { MdEditor } from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
 
 const text = ref('');
 <\/script>
@@ -1865,7 +1969,69 @@ const sanitize = (html) => {
 
 更详细的实现可以参考本文档的源码！
 
+### 🗂 折叠文档内容
+
+\`\`\`js
+import { config } from 'md-editor-v3';
+import { foldGutter } from '@codemirror/language';
+import { lineNumbers } from '@codemirror/view';
+
+config({
+  codeMirrorExtensions(_theme, extensions) {
+    return [...extensions, lineNumbers(), foldGutter()];
+  }
+});
+\`\`\`
+
+### 🏄🏻‍♂️ 新窗口打开链接
+
+1. 安装额外的扩展
+
+\`\`\`shell
+yarn add markdown-it-link-attributes
+\`\`\`
+
+2. 将扩展添加到编译器中
+
+\`\`\`js
+import { config } from 'md-editor-v3';
+import LinkAttr from 'markdown-it-link-attributes';
+// import Anchor from 'markdown-it-anchor';
+
+config({
+  markdownItPlugins(plugins) {
+    return [
+      ...plugins,
+      {
+        type: 'linkAttr',
+        plugin: LinkAttr,
+        options: {
+          matcher(href: string) {
+            // 如果使用了markdown-it-anchor
+            // 应该忽略标题头部的锚点链接
+            return !href.startsWith('#');
+          },
+          attrs: {
+            target: '_blank'
+          }
+        }
+      },
+      // {
+      //   type: 'anchor',
+      //   plugin: Anchor,
+      //   options: {
+      //     permalink: Anchor.permalink.headerLink(),
+      //     slugify(s: string) {
+      //       return s;
+      //     }
+      //   }
+      // }
+    ];
+  }
+});
+\`\`\`
+
 ## 🧻 编辑此页面
 
 [demo-zh-CN](https://github.com/imzbf/md-editor-v3/blob/dev-docs/public/demo-zh-CN.md)
-`,v={class:"container"},g={class:"doc"},x={name:"DemoPage"},I=d({...x,setup(b){const n=m(),e="demo-preview",t=a(o(n.state.lang==="en-US"?i:s));return l(()=>n.state.lang,()=>{t.value=o(n.state.lang==="en-US"?i:s)}),(E,y)=>(c(),p("div",v,[u("div",g,[r(h,{editorId:e,modelValue:t.value},null,8,["modelValue"]),r(f,{editorId:e})])]))}});export{I as default};
+`,b={class:"container"},k={class:"doc"},E={name:"DemoPage"},S=l({...E,setup(y){const n=c(),e="demo-preview",t=p(r(n.state.lang==="en-US"?d:a,{iconfontSvgUrl:i,iconfontClassUrl:s,EDITOR_VERSION:m}));return u(()=>n.state.lang,()=>{t.value=r(n.state.lang==="en-US"?d:a,{iconfontSvgUrl:i,iconfontClassUrl:s,EDITOR_VERSION:m})}),(M,C)=>(f(),h("div",b,[g("div",k,[o(x,{editorId:e,modelValue:t.value},null,8,["modelValue"]),o(v,{editorId:e})])]))}});export{S as default};

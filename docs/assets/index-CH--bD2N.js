@@ -1,4 +1,4 @@
-import{d,ad as m,a as c,am as o,w as p,ae as u,aj as g,ah as f,c as r,an as i,ao as s}from"./index-Dp5ZdC2m.js";import{_ as v}from"./index.vue_vue_type_script_setup_true_lang-8E6hofV6.js";import{_ as h}from"./index.vue_vue_type_style_index_0_lang-BxUEmsu6.js";import"./index-C93pSSwn.js";import"./MdCatalog-Ci59dDYJ.js";const l=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d,ad as m,a as c,an as o,w as p,ae as u,aj as g,ah as f,c as r,ao as i,ap as s}from"./index-CuN_Hyx1.js";import{_ as v}from"./index.vue_vue_type_script_setup_true_lang-Z6pG7kMg.js";import{_ as h}from"./index.vue_vue_type_style_index_0_lang-dh4RwG_z.js";import"./index-kegk0pe3.js";import"./MdCatalog-CV2OExW5.js";const l=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -232,9 +232,18 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
 ### 🤞🏼 noIconfont
 
 - **type**: \`boolean\`
-- **default**: \`true\`
+- **default**: \`false\`
 
   Not append iconfont script, download [Symbol version](\${iconfontSvgUrl}) or [Font class version](\${iconfontClassUrl}) and import it by yourself.
+
+  \`\`\`js
+  import '/assets/iconfont.js';
+
+  // Use Font class
+  // import { config } from 'md-editor-v3';
+  // import '/assets/iconfont.css';
+  // config({ iconfontType: 'class' })
+  \`\`\`
 
   \`\`\`vue
   <template>
@@ -244,12 +253,6 @@ This is the props of \`MdPreview\`, which is also part of \`MdEditor\`:
   <script setup>
   import { MdEditor } from 'md-editor-v3';
   import 'md-editor-v3/lib/style.css';
-
-  import '/assets/iconfont.js';
-
-  // User Font class version
-  // import '/assets/iconfont.css';
-  // config({ iconfontType: 'class' })
   <\/script>
   \`\`\`
 
@@ -1344,6 +1347,12 @@ editorRef.value?.execCommand('bold');
 
 Use \`config(option: ConfigOption)\` to reconfigure \`markdown-it\` and so on.
 
+!!! warning
+
+We recommend configuring it at the project entry point, such as in \`main.js\` for projects created with Vite. Avoid calling \`config\` within components!
+
+!!!
+
 ### 🦪 codeMirrorExtensions
 
 Customize new extensions based on theme and default extensions f codeMirror.
@@ -1979,6 +1988,9 @@ const text = ref('');
   - \`height\`: \`string\`, same as \`width\`.
   - \`showAdjust\`: \`boolean\`, not necessary, visibility of fullscreen button.
   - \`isFullscreen\`: \`boolean\`, necessary when \`showAdjust = true\`, status of fullscreen.
+  - \`class\`: \`string\`, \`^4.17.0\`, not necessary.
+  - \`style\`: \`CSSProperties | string\`, \`^4.17.0\`, not necessary.
+  - \`showMask\`: \`boolean\`, \`^4.17.0\`, not necessary, whether to display the mask layer, default \`false\`.
 
 - **events**
 
@@ -2133,8 +2145,9 @@ It is usually used in conjunction with \`DropdownToolbar\`.
   - \`height\`: \`string\`, same as \`width\`.
   - \`showAdjust\`: \`boolean\`, not necessary, visibility of fullscreen button.
   - \`isFullscreen\`: \`boolean\`, necessary when \`showAdjust = true\`, status of fullscreen.
-  - \`className\`: \`string\`, not necessary.
-  - \`style\`: \`string\`, not necessary.
+  - \`class\`: \`string\`, not necessary.
+  - \`style\`: \`CSSProperties | string\`, not necessary.
+  - \`showMask\`: \`boolean\`, \`^4.17.0\`, not necessary, whether to display the mask layer, default \`false\`.
 
 - **events**
 
@@ -2440,9 +2453,18 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 ### 🤞🏼 noIconfont
 
 - **类型**：\`boolean\`
-- **默认值**：\`true\`
+- **默认值**：\`false\`
 
   不插入 iconfont 链接，你可以下载[Symbol版本](\${iconfontSvgUrl})或者[Font class版本](\${iconfontClassUrl})到本地自行引入。
+
+  \`\`\`js
+  import '/assets/iconfont.js';
+
+  // 使用Font class版本
+  // import { config } from 'md-editor-v3';
+  // import '/assets/iconfont.css';
+  // config({ iconfontType: 'class' })
+  \`\`\`
 
   \`\`\`vue
   <template>
@@ -2450,14 +2472,8 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
   </template>
 
   <script setup>
-  import { MdEditor, config } from 'md-editor-v3';
+  import { MdEditor } from 'md-editor-v3';
   import 'md-editor-v3/lib/style.css';
-
-  import '/assets/iconfont.js';
-
-  // 使用Font class版本
-  // import '/assets/iconfont.css';
-  // config({ iconfontType: 'class' })
   <\/script>
   \`\`\`
 
@@ -3564,6 +3580,12 @@ editorRef.value?.execCommand('bold');
 
 使用\`config(option: ConfigOption)\`方法，可以对构建实例进行定制。
 
+!!! warning
+
+我们建议你在项目入口配置，例如 vite 创建的项目中的 main.js。不要在组件中去调用 \`config\` ！
+
+!!!
+
 ### 🦪 codeMirrorExtensions
 
 根据主题和内部默认的 codeMirror 扩展自定义新的扩展。
@@ -4208,6 +4230,9 @@ const text = ref('');
   - \`height\`：\`string\`，同\`width\`。
   - \`showAdjust\`: \`boolean\`，非必须，是否显示弹窗全屏按钮。
   - \`isFullscreen\`: \`boolean\`，显示全屏按钮时必须，弹窗全屏状态。
+  - \`class\`: \`string\`，\`^4.17.0\`，非必须，类名。
+  - \`style\`: \`CSSProperties | string\`，\`^4.17.0\`，非必须，样式。
+  - \`showMask\`: \`boolean\`，\`^4.17.0\`，非必须，是否展示遮罩层，默认false。
 
 - **events**
 
@@ -4362,8 +4387,9 @@ const scrollElement = document.documentElement;
   - \`height\`: \`string\`，同\`width\`。
   - \`showAdjust\`: \`boolean\`，非必须，是否显示弹窗全屏按钮。
   - \`isFullscreen\`: \`boolean\`，显示全屏按钮时必须，弹窗全屏状态。
-  - \`className\`: \`string\`，非必须，类名。
-  - \`style\`: \`string\`，非必须，样式。
+  - \`class\`: \`string\`，非必须，类名。
+  - \`style\`: \`CSSProperties | string\`，非必须，样式。
+  - \`showMask\`: \`boolean\`，\`^4.17.0\`，非必须，是否展示遮罩层，默认false。
 
 - **events**
 
@@ -4435,4 +4461,4 @@ console.log(iconfontClassUrl, iconfontSvgUrl, allToolbar, allFooter, zh_CN, en_U
 ## ✍️ 编辑此页面
 
 [doc-zh-CN](https://github.com/imzbf/md-editor-v3/blob/dev-docs/public/doc-zh-CN.md)
-`,b={class:"container"},y={class:"doc"},x={name:"DocPage"},P=d({...x,setup(w){const n=m(),e="doc-preview",t=c(o(n.state.lang==="en-US"?l:a,{iconfontSvgUrl:i,iconfontClassUrl:s}));return p(()=>n.state.lang,()=>{t.value=o(n.state.lang==="en-US"?l:a,{iconfontSvgUrl:i,iconfontClassUrl:s})}),(E,C)=>(u(),g("div",b,[f("div",y,[r(v,{editorId:e,modelValue:t.value},null,8,["modelValue"]),r(h,{editorId:e})])]))}});export{P as default};
+`,b={class:"container"},y={class:"doc"},w={name:"DocPage"},P=d({...w,setup(x){const n=m(),e="doc-preview",t=c(o(n.state.lang==="en-US"?l:a,{iconfontSvgUrl:i,iconfontClassUrl:s}));return p(()=>n.state.lang,()=>{t.value=o(n.state.lang==="en-US"?l:a,{iconfontSvgUrl:i,iconfontClassUrl:s})}),(E,C)=>(u(),g("div",b,[f("div",y,[r(v,{editorId:e,modelValue:t.value},null,8,["modelValue"]),r(h,{editorId:e})])]))}});export{P as default};

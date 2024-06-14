@@ -1,4 +1,4 @@
-import{d,ad as m,a as s,ap as a,w as l,ae as h,aj as c,ah as p,c as o}from"./index-Dp5ZdC2m.js";import{_ as u}from"./index.vue_vue_type_style_index_0_lang-BxUEmsu6.js";import{_ as w}from"./index.vue_vue_type_script_setup_true_lang-8E6hofV6.js";import"./MdCatalog-Ci59dDYJ.js";import"./index-C93pSSwn.js";const i=`## 🐶 Heading
+import{d as r,ad as d,a as m,w as s,ae as l,aj as h,ah as c,c as a}from"./index-CuN_Hyx1.js";import{_ as p}from"./index.vue_vue_type_style_index_0_lang-dh4RwG_z.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-Z6pG7kMg.js";import"./MdCatalog-CV2OExW5.js";import"./index-kegk0pe3.js";const o=`## 🐶 Heading
 
 \`\`\`markdown
 ## Heading
@@ -308,7 +308,7 @@ failure、danger、bug、example、quote、hint、caution、error、attention
 
 !!!
 \`\`\`
-`,r=`## 🐶 标题
+`,i=`## 🐶 标题
 
 \`\`\`markdown
 ## 标题
@@ -616,4 +616,4 @@ failure、danger、bug、example、quote、hint、caution、error、attention
 
 !!!
 \`\`\`
-`,f={class:"container"},v={class:"doc"},y={name:"DemoPage"},q=d({...y,setup(g){const n=m(),e="grammar-preview",t=s(a(n.state.lang==="en-US"?i:r));return l(()=>n.state.lang,()=>{t.value=a(n.state.lang==="en-US"?i:r)}),(I,x)=>(h(),c("div",f,[p("div",v,[o(w,{editorId:e,modelValue:t.value},null,8,["modelValue"]),o(u,{editorId:e})])]))}});export{q as default};
+`,w={class:"container"},f={class:"doc"},v={name:"DemoPage"},A=r({...v,setup(y){const n=d(),e="grammar-preview",t=m(n.state.lang==="en-US"?o:i);return s(()=>n.state.lang,()=>{t.value=n.state.lang==="en-US"?o:i}),(k,I)=>(l(),h("div",w,[c("div",f,[a(u,{editorId:e,modelValue:t.value},null,8,["modelValue"]),a(p,{editorId:e})])]))}});export{A as default};

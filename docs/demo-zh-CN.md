@@ -756,14 +756,24 @@ const toolbars = ['italic', 'underline', '-', 'bold', '=', 'github'];
 
 这里给出一个完全不使用外部链接，全部自行引入的示例：
 
-```vue
-<template>
-  <MdEditor v-model="text" noIconfont />
-</template>
+1. 安装依赖
 
-<script setup>
-import { ref } from 'vue';
-import { MdEditor, config } from 'md-editor-v3';
+```shell
+yarn add screenfull katex cropperjs mermaid highlight.js prettier
+```
+
+2. 配置到编辑器
+
+!!! warning
+
+我们建议你在项目入口配置，例如 vite 创建的项目中的 main.js。不要在组件中去调用 `config` ！
+
+!!!
+
+main.js
+
+```js
+import { config } from 'md-editor-v3';
 import 'md-editor-v3/lib/style.css';
 
 import screenfull from 'screenfull';
@@ -786,7 +796,7 @@ import parserMarkdown from 'prettier/parser-markdown';
 import * as prettier from 'prettier';
 import parserMarkdown from 'prettier/plugins/markdown';
 
-// https://at.alicdn.com/t/c/font_2605852_u82y61ve02.js
+// ${iconfontSvgUrl}
 import './assets/iconfont.js';
 
 config({
@@ -812,6 +822,17 @@ config({
     }
   }
 });
+```
+
+```vue
+<template>
+  <MdEditor v-model="text" noIconfont />
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import { MdEditor } from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
 
 const text = ref('');
 </script>
@@ -934,6 +955,68 @@ const sanitize = (html) => {
 ```
 
 更详细的实现可以参考本文档的源码！
+
+### 🗂 折叠文档内容
+
+```js
+import { config } from 'md-editor-v3';
+import { foldGutter } from '@codemirror/language';
+import { lineNumbers } from '@codemirror/view';
+
+config({
+  codeMirrorExtensions(_theme, extensions) {
+    return [...extensions, lineNumbers(), foldGutter()];
+  }
+});
+```
+
+### 🏄🏻‍♂️ 新窗口打开链接
+
+1. 安装额外的扩展
+
+```shell
+yarn add markdown-it-link-attributes
+```
+
+2. 将扩展添加到编译器中
+
+```js
+import { config } from 'md-editor-v3';
+import LinkAttr from 'markdown-it-link-attributes';
+// import Anchor from 'markdown-it-anchor';
+
+config({
+  markdownItPlugins(plugins) {
+    return [
+      ...plugins,
+      {
+        type: 'linkAttr',
+        plugin: LinkAttr,
+        options: {
+          matcher(href: string) {
+            // 如果使用了markdown-it-anchor
+            // 应该忽略标题头部的锚点链接
+            return !href.startsWith('#');
+          },
+          attrs: {
+            target: '_blank'
+          }
+        }
+      },
+      // {
+      //   type: 'anchor',
+      //   plugin: Anchor,
+      //   options: {
+      //     permalink: Anchor.permalink.headerLink(),
+      //     slugify(s: string) {
+      //       return s;
+      //     }
+      //   }
+      // }
+    ];
+  }
+});
+```
 
 ## 🧻 编辑此页面
 
