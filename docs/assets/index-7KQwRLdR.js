@@ -1,4 +1,4 @@
-import{d,ad as m,a as c,an as o,w as p,ae as u,aj as g,ah as f,c as r,ao as i,ap as s}from"./index-CuN_Hyx1.js";import{_ as v}from"./index.vue_vue_type_script_setup_true_lang-Z6pG7kMg.js";import{_ as h}from"./index.vue_vue_type_style_index_0_lang-dh4RwG_z.js";import"./index-kegk0pe3.js";import"./MdCatalog-CV2OExW5.js";const l=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d,ad as m,a as c,an as o,w as p,ae as u,aj as g,ah as f,c as r,ao as i,ap as s}from"./index-CyqmS_oq.js";import{_ as v}from"./index.vue_vue_type_script_setup_true_lang-D1GwbWfs.js";import{_ as h}from"./index.vue_vue_type_style_index_0_lang-C30Zwkxp.js";import"./index-BttsV8Gl.js";import"./MdCatalog-DtSO4VrC.js";const l=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -1988,9 +1988,9 @@ const text = ref('');
   - \`height\`: \`string\`, same as \`width\`.
   - \`showAdjust\`: \`boolean\`, not necessary, visibility of fullscreen button.
   - \`isFullscreen\`: \`boolean\`, necessary when \`showAdjust = true\`, status of fullscreen.
-  - \`class\`: \`string\`, \`^4.17.0\`, not necessary.
-  - \`style\`: \`CSSProperties | string\`, \`^4.17.0\`, not necessary.
-  - \`showMask\`: \`boolean\`, \`^4.17.0\`, not necessary, whether to display the mask layer, default \`false\`.
+  - \`class\`: \`string\`, \`^4.16.8\`, not necessary.
+  - \`style\`: \`CSSProperties | string\`, \`^4.16.8\`, not necessary.
+  - \`showMask\`: \`boolean\`, \`^4.16.8\`, not necessary, whether to display the mask layer, default \`false\`.
 
 - **events**
 
@@ -2147,7 +2147,7 @@ It is usually used in conjunction with \`DropdownToolbar\`.
   - \`isFullscreen\`: \`boolean\`, necessary when \`showAdjust = true\`, status of fullscreen.
   - \`class\`: \`string\`, not necessary.
   - \`style\`: \`CSSProperties | string\`, not necessary.
-  - \`showMask\`: \`boolean\`, \`^4.17.0\`, not necessary, whether to display the mask layer, default \`false\`.
+  - \`showMask\`: \`boolean\`, \`^4.16.8\`, not necessary, whether to display the mask layer, default \`false\`.
 
 - **events**
 
@@ -4230,9 +4230,9 @@ const text = ref('');
   - \`height\`：\`string\`，同\`width\`。
   - \`showAdjust\`: \`boolean\`，非必须，是否显示弹窗全屏按钮。
   - \`isFullscreen\`: \`boolean\`，显示全屏按钮时必须，弹窗全屏状态。
-  - \`class\`: \`string\`，\`^4.17.0\`，非必须，类名。
-  - \`style\`: \`CSSProperties | string\`，\`^4.17.0\`，非必须，样式。
-  - \`showMask\`: \`boolean\`，\`^4.17.0\`，非必须，是否展示遮罩层，默认false。
+  - \`class\`: \`string\`，\`^4.16.8\`，非必须，类名。
+  - \`style\`: \`CSSProperties | string\`，\`^4.16.8\`，非必须，样式。
+  - \`showMask\`: \`boolean\`，\`^4.16.8\`，非必须，是否展示遮罩层，默认false。
 
 - **events**
 
@@ -4389,7 +4389,7 @@ const scrollElement = document.documentElement;
   - \`isFullscreen\`: \`boolean\`，显示全屏按钮时必须，弹窗全屏状态。
   - \`class\`: \`string\`，非必须，类名。
   - \`style\`: \`CSSProperties | string\`，非必须，样式。
-  - \`showMask\`: \`boolean\`，\`^4.17.0\`，非必须，是否展示遮罩层，默认false。
+  - \`showMask\`: \`boolean\`，\`^4.16.8\`，非必须，是否展示遮罩层，默认false。
 
 - **events**
 

@@ -1,4 +1,4 @@
-import{d as l,ad as c,a as p,an as r,w as u,ae as f,aj as h,ah as g,c as o,ao as i,ap as s,aq as m}from"./index-CuN_Hyx1.js";import{_ as v}from"./index.vue_vue_type_style_index_0_lang-dh4RwG_z.js";import{_ as x}from"./index.vue_vue_type_script_setup_true_lang-Z6pG7kMg.js";import"./MdCatalog-CV2OExW5.js";import"./index-kegk0pe3.js";const d=`## 😁 Basic Usage
+import{d as l,ad as c,a as p,an as r,w as u,ae as f,aj as h,ah as g,c as o,ao as i,ap as s,aq as m}from"./index-CyqmS_oq.js";import{_ as v}from"./index.vue_vue_type_style_index_0_lang-C30Zwkxp.js";import{_ as x}from"./index.vue_vue_type_script_setup_true_lang-D1GwbWfs.js";import"./MdCatalog-DtSO4VrC.js";import"./index-BttsV8Gl.js";const d=`## 😁 Basic Usage
 
 It has been developing iteratively，so update the latest version please. Publish logs: [releases](https://github.com/imzbf/md-editor-v3/releases)
 
