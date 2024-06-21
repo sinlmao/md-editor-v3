@@ -1,4 +1,4 @@
-import{d as r,ad as d,a as m,w as s,ae as l,aj as h,ah as c,c as a}from"./index-BlSYER1C.js";import{_ as p}from"./index.vue_vue_type_style_index_0_lang-C14hcMKr.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-C-_b7-bb.js";import"./MdCatalog-QzKOQsBG.js";import"./index-B2O0RjHq.js";const o=`## 🐶 Heading
+import{d as r,ad as d,a as m,w as s,ae as l,aj as h,ah as p,c as a}from"./index-D9-Xz3_b.js";import{_ as c}from"./index.vue_vue_type_style_index_0_lang-B-ebYgD9.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-Jv4xxrWk.js";import"./MdCatalog-CADVAjZj.js";import"./index-C7NBhmDv.js";const o=`## 🐶 Heading
 
 \`\`\`markdown
 ## Heading
@@ -136,14 +136,28 @@ pnpm install md-editor-v3
 ### 🤌🏻 Forcefully fold
 
 \`\`\`js ::close
-import MdEditor from 'md-editor-rt';
-import 'md-editor-rt/lib/style.css';
+import MdEditor from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
 \`\`\`
 
 \`\`\`\`markdown
 \`\`\`js ::close
-import MdEditor from 'md-editor-rt';
-import 'md-editor-rt/lib/style.css';
+import MdEditor from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+\`\`\`
+\`\`\`\`
+
+### 👐 Forcefully open
+
+\`\`\`js ::open
+import MdEditor from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+\`\`\`
+
+\`\`\`\`markdown
+\`\`\`js ::open
+import MdEditor from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
 \`\`\`
 \`\`\`\`
 
@@ -446,14 +460,28 @@ pnpm install md-editor-v3
 ### 🤌🏻 强制折叠
 
 \`\`\`js ::close
-import MdEditor from 'md-editor-rt';
-import 'md-editor-rt/lib/style.css';
+import MdEditor from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
 \`\`\`
 
 \`\`\`\`markdown
 \`\`\`js ::close
-import MdEditor from 'md-editor-rt';
-import 'md-editor-rt/lib/style.css';
+import MdEditor from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+\`\`\`
+\`\`\`\`
+
+### 👐 强制展开
+
+\`\`\`js ::open
+import MdEditor from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+\`\`\`
+
+\`\`\`\`markdown
+\`\`\`js ::open
+import MdEditor from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
 \`\`\`
 \`\`\`\`
 
@@ -616,4 +644,4 @@ failure、danger、bug、example、quote、hint、caution、error、attention
 
 !!!
 \`\`\`
-`,w={class:"container"},f={class:"doc"},v={name:"DemoPage"},A=r({...v,setup(y){const n=d(),e="grammar-preview",t=m(n.state.lang==="en-US"?o:i);return s(()=>n.state.lang,()=>{t.value=n.state.lang==="en-US"?o:i}),(k,I)=>(l(),h("div",w,[c("div",f,[a(u,{editorId:e,modelValue:t.value},null,8,["modelValue"]),a(p,{editorId:e})])]))}});export{A as default};
+`,v={class:"container"},w={class:"doc"},f={name:"DemoPage"},j=r({...f,setup(y){const n=d(),e="grammar-preview",t=m(n.state.lang==="en-US"?o:i);return s(()=>n.state.lang,()=>{t.value=n.state.lang==="en-US"?o:i}),(k,I)=>(l(),h("div",v,[p("div",w,[a(u,{editorId:e,modelValue:t.value},null,8,["modelValue"]),a(c,{editorId:e})])]))}});export{j as default};

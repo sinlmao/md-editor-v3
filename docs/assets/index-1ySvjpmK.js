@@ -1,4 +1,4 @@
-import{d as i,ad as a,a as s,w as m,ae as p,aj as l,ah as c,c as t}from"./index-BlSYER1C.js";import{_ as M}from"./index.vue_vue_type_script_setup_true_lang-C-_b7-bb.js";import{_ as f}from"./index.vue_vue_type_style_index_0_lang-C14hcMKr.js";import"./index-B2O0RjHq.js";import"./MdCatalog-QzKOQsBG.js";const r=`## 🧙🏼 Upgrade from 3.x to 4.x
+import{d as i,ad as a,a as s,w as m,ae as p,aj as l,ah as c,c as t}from"./index-D9-Xz3_b.js";import{_ as M}from"./index.vue_vue_type_script_setup_true_lang-Jv4xxrWk.js";import{_ as f}from"./index.vue_vue_type_style_index_0_lang-B-ebYgD9.js";import"./index-C7NBhmDv.js";import"./MdCatalog-CADVAjZj.js";const r=`## 🧙🏼 Upgrade from 3.x to 4.x
 
 ### 🏄🏼 Usage
 
