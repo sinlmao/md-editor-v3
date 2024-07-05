@@ -1,4 +1,4 @@
-import{d as o,ad as n,a as d,w as r,ae as m,aj as a,ah as h,c}from"./index-CGsmzqux.js";import{_ as l}from"./index.vue_vue_type_script_setup_true_lang-B9sxTWvO.js";import"./index-DKtaqI2Z.js";const i=`## About md-editor-v3
+import{d as o,ad as n,a as d,w as r,ae as m,aj as a,ah as h,c}from"./index-BxlRjk5z.js";import{_ as l}from"./index.vue_vue_type_script_setup_true_lang-Bvcx4N6F.js";import"./index-DqNJ283x.js";const i=`## About md-editor-v3
 
 <br>
 
