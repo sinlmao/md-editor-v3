@@ -1,4 +1,4 @@
-import{d as r,ad as d,a as m,w as s,ae as l,aj as h,ah as p,c as a}from"./index-DCDQNct5.js";import{_ as c}from"./index.vue_vue_type_style_index_0_lang-LpGY8EjO.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-CSSov3Jn.js";import"./MdCatalog-CQ8LpQli.js";import"./index-1nCnU7lt.js";const o=`## 🐶 Heading
+import{d as r,ad as d,a as m,w as s,ae as l,aj as h,ah as p,c as a}from"./index-DGEMAfWr.js";import{_ as c}from"./index.vue_vue_type_style_index_0_lang-CdHa0Z_A.js";import{_ as u}from"./index.vue_vue_type_script_setup_true_lang-BDFzw7t5.js";import"./MdCatalog-1wNjjEji.js";import"./index-8WUuheTK.js";const o=`## 🐶 Heading
 
 \`\`\`markdown
 ## Heading
@@ -214,6 +214,8 @@ According to the understanding of other editors, no other editors currently empl
 - [ ] Saturday
 - [x] Sunday
 \`\`\`
+
+[Example](https://imzbf.github.io/md-editor-v3/en-US/demo#☑%EF%B8%8F%20Toggleable%20status%20task%20list) that supports toggling task status in the preview module.
 
 ---
 
@@ -539,6 +541,8 @@ import 'md-editor-v3/lib/style.css';
 - [x] 周天
 \`\`\`
 
+支持在预览模块切换任务状态的[示例](https://imzbf.github.io/md-editor-v3/zh-CN/demo#☑%EF%B8%8F%20可切换状态的任务列表)
+
 ---
 
 ## 🐮 表格
@@ -644,4 +648,4 @@ failure、danger、bug、example、quote、hint、caution、error、attention
 
 !!!
 \`\`\`
-`,v={class:"container"},w={class:"doc"},f={name:"DemoPage"},j=r({...f,setup(y){const n=d(),e="grammar-preview",t=m(n.state.lang==="en-US"?o:i);return s(()=>n.state.lang,()=>{t.value=n.state.lang==="en-US"?o:i}),(k,I)=>(l(),h("div",v,[p("div",w,[a(u,{editorId:e,modelValue:t.value},null,8,["modelValue"]),a(c,{editorId:e})])]))}});export{j as default};
+`,v={class:"container"},f={class:"doc"},w={name:"DemoPage"},E=r({...w,setup(y){const n=d(),e="grammar-preview",t=m(n.state.lang==="en-US"?o:i);return s(()=>n.state.lang,()=>{t.value=n.state.lang==="en-US"?o:i}),(k,I)=>(l(),h("div",v,[p("div",f,[a(u,{editorId:e,modelValue:t.value},null,8,["modelValue"]),a(c,{editorId:e})])]))}});export{E as default};

@@ -1,4 +1,4 @@
-import{d as l,ad as c,a as p,an as r,w as u,ae as f,aj as h,ah as g,c as o,ao as i,ap as s,aq as m}from"./index-DCDQNct5.js";import{_ as v}from"./index.vue_vue_type_style_index_0_lang-LpGY8EjO.js";import{_ as x}from"./index.vue_vue_type_script_setup_true_lang-CSSov3Jn.js";import"./MdCatalog-CQ8LpQli.js";import"./index-1nCnU7lt.js";const d=`## 😁 Basic Usage
+import{d as l,ad as c,a as p,an as r,w as u,ae as f,aj as h,ah as g,c as o,ao as i,ap as s,aq as m}from"./index-DGEMAfWr.js";import{_ as v}from"./index.vue_vue_type_style_index_0_lang-CdHa0Z_A.js";import{_ as x}from"./index.vue_vue_type_script_setup_true_lang-BDFzw7t5.js";import"./MdCatalog-1wNjjEji.js";import"./index-8WUuheTK.js";const d=`## 😁 Basic Usage
 
 It has been developing iteratively，so update the latest version please. Publish logs: [releases](https://github.com/imzbf/md-editor-v3/releases)
 
@@ -1006,6 +1006,34 @@ config({
     ];
   }
 });
+\`\`\`
+
+### ☑️ Toggleable status task list
+
+\`\`\`js
+import { config } from 'md-editor-v3';
+config({
+  markdownItPlugins(plugins, { editorId }) {
+    return plugins.map((item) => {
+      if (item.type === 'taskList') {
+        return {
+          ...item,
+          options: {
+            ...item.options,
+            enabled: true
+            // If you just want to enable this feature for a certain editor
+            // enabled: editorId === 'myId'
+          }
+        };
+      }
+      return item;
+    });
+  }
+});
+\`\`\`
+
+\`\`\`vue
+<MdEditor editorId="myId" v-model="text" />
 \`\`\`
 
 ## 🧻 Edit This Page
@@ -2029,6 +2057,34 @@ config({
     ];
   }
 });
+\`\`\`
+
+### ☑️ 可切换状态的任务列表
+
+\`\`\`js
+import { config } from 'md-editor-v3';
+config({
+  markdownItPlugins(plugins, { editorId }) {
+    return plugins.map((item) => {
+      if (item.type === 'taskList') {
+        return {
+          ...item,
+          options: {
+            ...item.options,
+            enabled: true
+            // 如果只是想对某个编辑器开启这个功能
+            // enabled: editorId === 'myId'
+          }
+        };
+      }
+      return item;
+    });
+  }
+});
+\`\`\`
+
+\`\`\`vue
+<MdEditor editorId="myId" v-model="text" />
 \`\`\`
 
 ## 🧻 编辑此页面
