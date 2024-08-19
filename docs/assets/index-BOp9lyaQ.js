@@ -1,4 +1,4 @@
-import{d as l,a9 as c,a as p,al as o,w as u,aa as f,ah as h,ad as g,c as r,am as i,an as s,ao as m}from"./index-mstXR5Qg.js";import{_ as v}from"./index.vue_vue_type_style_index_0_lang-FAaUKv8z.js";import{_ as x}from"./index.vue_vue_type_script_setup_true_lang-C8FZeH5G.js";import"./index3-zO_LtZQv.js";import"./index-BABYOLP-.js";const d=`## 😁 Basic Usage
+import{d as l,a9 as c,a as p,al as o,w as u,aa as f,ah as h,ad as g,c as r,am as i,an as s,ao as m}from"./index-DaLdCLNJ.js";import{_ as v}from"./index.vue_vue_type_style_index_0_lang-Du4Wimld.js";import{_ as x}from"./index.vue_vue_type_script_setup_true_lang-D9E1z4Ck.js";import"./index3-DLawqrIO.js";import"./index-DpNfSmpH.js";const d=`## 😁 Basic Usage
 
 It has been developing iteratively，so update the latest version please. Publish logs: [releases](https://github.com/imzbf/md-editor-v3/releases)
 
@@ -114,7 +114,9 @@ Here are the precautions:
 
 1. The image zoom-in view feature is ineffective; implementation needs to be done manually!!!
 2. Do not use CDN to reference dependency libraries by default; refer to [[Import All Library]](https://imzbf.github.io/md-editor-v3/en-US/demo#%F0%9F%99%8D%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F%20Import%20All%20Library)!!!
-3. Only font-class type icons can be used; the default symbol type is ineffective!!!## 🥂 Api Usage
+3. Only font-class type icons can be used; the default symbol type is ineffective!!!
+
+## 🥂 Api Usage
 
 Usages of some APIs.
 
