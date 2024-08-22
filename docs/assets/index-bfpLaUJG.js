@@ -1,4 +1,4 @@
-import{d,a9 as m,a as c,al as o,w as p,aa as u,ah as g,ad as f,c as r,am as i,an as s}from"./index-CQjRsuq-.js";import{_ as v}from"./index.vue_vue_type_script_setup_true_lang-F2Egf0F8.js";import{_ as h}from"./index.vue_vue_type_style_index_0_lang-BGWyqsiW.js";import"./index-CmGql_vh.js";import"./index3-B0Rq6lfN.js";const l=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
+import{d,a9 as m,a as c,al as o,w as p,aa as u,ah as g,ad as f,c as r,am as i,an as s}from"./index-7xuu4s0q.js";import{_ as v}from"./index.vue_vue_type_script_setup_true_lang-D0hCFU6I.js";import{_ as h}from"./index.vue_vue_type_style_index_0_lang-Cs9x2YZP.js";import"./index-BCrenVw1.js";import"./index3-D7bYn-br.js";const l=`> Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo).
 
 ## 🔖 MdPreview Props
 
@@ -880,7 +880,7 @@ For more info, Get **Internal Components** heading. Get source code of **mark**,
 
 - **type**: \`(h: string) => void\`
 
-  Compile markdown successful event, ou can use it to get the html code.
+  Compile markdown successful event, you can use it to get the html code.
 
 ---
 
