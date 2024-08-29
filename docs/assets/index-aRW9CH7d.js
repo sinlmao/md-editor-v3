@@ -1,4 +1,4 @@
-import{d as l,a9 as c,a as p,al as o,w as u,aa as f,ah as h,ad as g,c as r,am as i,an as s,ao as m}from"./index-BJCK4wVC.js";import{_ as v}from"./index.vue_vue_type_style_index_0_lang-2z-9QgB5.js";import{_ as x}from"./index.vue_vue_type_script_setup_true_lang-B3tfVRZp.js";import"./index3-SQre22MI.js";import"./index-DIJW_iIn.js";const d=`## 😁 Basic Usage
+import{d as l,a9 as c,a as p,al as o,w as u,aa as f,ah as h,ad as g,c as r,am as i,an as s,ao as m}from"./index-9p69v7WY.js";import{_ as v}from"./index.vue_vue_type_style_index_0_lang-B5cM7m1X.js";import{_ as x}from"./index.vue_vue_type_script_setup_true_lang-jhjOUccg.js";import"./index3-DfizuOPx.js";import"./index-CDuc4Dby.js";const d=`## 😁 Basic Usage
 
 It has been developing iteratively，so update the latest version please. Publish logs: [releases](https://github.com/imzbf/md-editor-v3/releases)
 
@@ -49,7 +49,11 @@ yarn add md-editor-v3
 npm install md-editor-v3
 \`\`\`
 
+!!! warning
+
 When using server-side rendering, make sure to set \`editorId\` to a constant value.
+
+!!!
 
 #### 🥱 Setup Template
 
@@ -104,7 +108,11 @@ const scrollElement = document.documentElement;
 <\/script>
 \`\`\`
 
+!!! warning
+
 When using server-side rendering, \`scrollElement\` should be of string type, eg: \`body\`, \`#id\`, \`.class\`.
+
+!!!
 
 ## 🎛 Used in Web Component
 
@@ -1102,7 +1110,11 @@ yarn add md-editor-v3
 npm install md-editor-v3
 \`\`\`
 
+!!! warning
+
 当使用服务端渲染时，请务必设置\`editorId\`为固定值。
+
+!!!
 
 #### 🥱 Setup 模板
 
@@ -1158,7 +1170,11 @@ const scrollElement = document.documentElement;
 <\/script>
 \`\`\`
 
+!!! warning
+
 当使用服务端渲染时，\`scrollElement\`应该是字符类型，例：\`body\`、\`#id\`、\`.class\`。
+
+!!!
 
 ## 🎛 Web Component中使用
 
